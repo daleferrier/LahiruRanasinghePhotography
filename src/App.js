@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Navigation from './components/Navigation'
+import LandingCarousel from './components/LandingCarousel';
+import ProfilePage from './components/ProfilePage'
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import LandingPage from './components/LandingPage';
+import Gallery from './components/Gallery';
+import ReactImages from './components/ReactImages';
+import ContactForm from './components/ContactForm';
+import Testimonials from './components/Testimonials';
+import TestimonialForm from './components/TestimonialForm';
+import Pricing from './components/Pricing';
+import { Route, Switch, Link, NavLink } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return (
+      <div className="App">
+        <div className="App-Navigation">
+          <Navigation />
+        </div>
+        <div>{/* <LandingPage/> */}</div>
+        <div className="">{/* <LandingCarousel/> */}</div>
+        <div className="">{/* <ProfilePage/> */}</div>
+        <div className="">{/* <Gallery/> */}</div>
+        <div className="">{/* <ContactForm/> */}</div>
+        <div className="">{/* <Testimonials/> */}</div>
+        <div className="">{/* <TestimonialForm/> */}</div>
+        <div className="">{/* <Pricing/> */}</div>
+
+        <Switch>
+          <Route exact path="/" render={() => <LandingPage />} />
+          <Route exact path="/gallery" render={() => <Gallery />} />
+          <Route exact path="/pricing" render={() => <Pricing />} />
+          <Route exact path="/testimonials" render={() => <Testimonials/>} />
+          <Route exact path="/profile" render={() => <ProfilePage />} />
+          <Route exact path="/contact" render={() => <ContactForm />} />
+          <Route exact path="/review" render={() => <TestimonialForm/>} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

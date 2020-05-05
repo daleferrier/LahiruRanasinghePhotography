@@ -1,0 +1,36 @@
+/* .LandingPage-Jumbotron{
+    color: red;
+    background-image: url('../images/1.jpeg');
+    background-repeat: repeat-y;
+    background-size: contain;
+    height: 50vh;
+} */
+.LandingPage-container{
+    margin: 0;
+    padding: 0;
+}
+
+.LandingPage-jumbotron{
+    background-image: url('../images/1.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50vh;
+}
+
+.LandingPage-container h2{
+    color: white;
+    opacity: 50%;
+    margin-top: initial;
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.LandingPage{
+    margin: 0;
+    padding: 0;
+    height: 100% ;
+    /* border: 2px solid red; */
+}
+.LandingPage-logo img{
+    width: 100%;
+}

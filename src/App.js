@@ -6,7 +6,6 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from './components/LandingPage';
 import Gallery from './components/Gallery';
-import ReactImages from './components/ReactImages';
 import ContactForm from './components/ContactForm';
 import Testimonials from './components/Testimonials';
 import TestimonialForm from './components/TestimonialForm';

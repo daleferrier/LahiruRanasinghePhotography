@@ -42,7 +42,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 const useStyles = makeStyles({
   root: {},
   backdrop: {
-    background: 'rgba(0, 0, 0, 0.9)'
+    background: 'rgba(0, 0, 0, 0.94)'
   },
 });
 

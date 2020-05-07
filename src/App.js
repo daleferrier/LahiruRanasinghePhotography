@@ -16,27 +16,26 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <div className="App-Navigation">
-          <Navigation />
-        </div>
-        <div>{/* <LandingPage/> */}</div>
-        <div className="">{/* <LandingCarousel/> */}</div>
-        <div className="">{/* <ProfilePage/> */}</div>
-        <div className="">{/* <Gallery/> */}</div>
-        <div className="">{/* <ContactForm/> */}</div>
-        <div className="">{/* <Testimonials/> */}</div>
-        <div className="">{/* <TestimonialForm/> */}</div>
-        <div className="">{/* <Pricing/> */}</div>
-
+        <div className="App-Navigation">{/* <Navigation /> */}</div>
         <Switch>
           <Route exact path="/" render={() => <LandingPage />} />
           <Route exact path="/gallery" render={() => <Gallery />} />
           <Route exact path="/pricing" render={() => <Pricing />} />
-          <Route exact path="/testimonials" render={() => <Testimonials/>} />
+          <Route exact path="/testimonials" render={() => <Testimonials />} />
           <Route exact path="/profile" render={() => <ProfilePage />} />
           <Route exact path="/contact" render={() => <ContactForm />} />
-          <Route exact path="/review" render={() => <TestimonialForm/>} />
+          <Route exact path="/review" render={() => <TestimonialForm />} />
         </Switch>
+        <div>{/* <LandingPage/> */}</div>
+        <div className="">{/* <LandingCarousel/> */}</div>
+        <div className="">
+          <ProfilePage />
+        </div>
+        <div className="">{/* <Gallery/> */}</div>
+        <div className="">{/* <ContactForm/> */}</div>
+        <div className=""><Testimonials/></div>
+        <div className="">{/* <TestimonialForm/> */}</div>
+        <div className=""><Pricing/></div>
       </div>
     );
   }

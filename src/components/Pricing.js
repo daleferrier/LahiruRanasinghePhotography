@@ -13,6 +13,9 @@ import Portrait from "../images/portrait.jpeg";
 import Couple from "../images/couple.jpg";
 import pricing from "../data/pricing";
 import './Pricing.css'
+import {headers} from '../data/headers';
+import PageHeader from './PageHeader';
+
 
 const useStyles = makeStyles({
   root: {
@@ -20,6 +23,8 @@ const useStyles = makeStyles({
     margin: "100px 10px 5px 10px",
   },
 });
+
+const props = headers
 
 export default function Pricing() {
   const classes = useStyles();
@@ -29,6 +34,7 @@ export default function Pricing() {
   return (
 
     <div className='Pricing'>
+          <PageHeader header={props.Pricing}/>
           {pricing.map((m) => (
             <Card className={classes.root}>
               <CardActionArea>

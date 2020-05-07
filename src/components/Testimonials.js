@@ -12,15 +12,19 @@ import Picture from '../images/1.jpeg'
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import { Route, Switch, Link, NavLink } from "react-router-dom";
+import { headers } from "../data/headers";
+import PageHeader from "./PageHeader";
 
 class Testimonials extends Component{
     static defaultProps={
-        testimonials
+        testimonials, 
+        headers
     }
 
     render(){
         return (
           <div className="Testimonials">
+            <PageHeader header={this.props.headers.Testimonials}/>
             {this.props.testimonials.map((m) => (
               <Card
                 style={{ backgroundColor: "" }}

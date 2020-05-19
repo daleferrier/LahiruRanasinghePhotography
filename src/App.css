@@ -1,0 +1,25 @@
+.App{
+    /* padding-top: 100px; */
+}
+
+.padding{
+    padding-top: 56px;
+}
+
+.NavAndLandingPage{
+    padding-top: 100px;
+    height: 100vh;
+}
+
+.App-ProfilePage{
+    height: 100vh;
+}
+
+.App-Contact{
+    height: 100vh;
+    margin: 30px 0;
+}
+
+.App-review{
+    height: 100vh;
+}

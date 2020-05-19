@@ -1,9 +1,7 @@
 .ProfilePage{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    max-width: 400px;
-    margin:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ProfilePage-avatar{

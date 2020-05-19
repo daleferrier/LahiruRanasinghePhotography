@@ -7,15 +7,19 @@ import Grid from "@material-ui/core/Grid";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import {headers} from '../data/headers';
+import PageHeader from './PageHeader';
 
 class Gallery extends Component{
     static defaultProps={
-        Images
+        Images,
+        headers
     }
 
     render(){
         return(
             <div className='Gallery'>
+                <PageHeader header = {this.props.headers.Gallery}/>
 
                 <CardColumns className='card-columns'>
                     {this.props.Images.map(m=>(

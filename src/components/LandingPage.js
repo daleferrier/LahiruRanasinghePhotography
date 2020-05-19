@@ -8,19 +8,21 @@ import Logo from '../images/logo.svg'
 import Image from "react-bootstrap/Image";
 import LandingCarousel from './LandingCarousel';
 
-
-class LandingPage extends Component{
-    render(){
+// class LandingPage extends Component{
+  export default function LandingPage(props){
+    // render(){
         return (
-          <div className="LandingPage">
-            <div className='LandingPage-logo'>
-              <img src={Logo}/>
-              <p>TREASUREBOX PHOTOGRAPHY</p>
-            </div>
-                <LandingCarousel/>
+          <div
+            className="LandingPage"
+          >
+            {/* <div className='LandingPage-logo'> */}
+            {/* <img src={Logo}/>
+              <p>TREASUREBOX PHOTOGRAPHY</p> */}
+            {/* </div> */}
+            <LandingCarousel />
           </div>
         );
     }
-}
+// }
 
-export default LandingPage;
+// export default LandingPage;

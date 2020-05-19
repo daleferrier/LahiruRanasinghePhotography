@@ -14,6 +14,7 @@ import AddIcon from "@material-ui/icons/Add";
 import { Route, Switch, Link, NavLink } from "react-router-dom";
 import { headers } from "../data/headers";
 import PageHeader from "./PageHeader";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 class Testimonials extends Component{
     static defaultProps={
@@ -57,16 +58,14 @@ class Testimonials extends Component{
                 {/* <p>{m}</p> */}
               </Card>
             ))}
-            <Fab
-              variant="extended"
+            {/* <Fab
+              variant="round"
               color="primary"
               aria-label="add"
-              style={{ position: "fixed", bottom: "5px", right: "5px" }}
+              style={{ zIndex: 2, position: "fixed", bottom: "5px", right: "5px", fontSize: '10px' }}
             >
-              {/* <AddIcon /> */}
-              {/* Add Review */}
-              <Link to="/review" style={{color: 'white'}}>Add Review</Link>
-            </Fab>
+              <Link to="/review" style={{color: 'white'}}><MailOutlineIcon/></Link>
+            </Fab> */}
           </div>
         );
     }

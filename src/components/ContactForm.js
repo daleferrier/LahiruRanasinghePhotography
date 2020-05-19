@@ -10,6 +10,11 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import Container from '@material-ui/core/Container'
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from '@material-ui/core/Paper'
+import {headers} from '../data/headers'
+import PageHeader from './PageHeader'
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import { HashLink as Link } from "react-router-hash-link";
+import Fab from "@material-ui/core/Fab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,29 +26,58 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const props = headers
+
 export default function ContactForm() {
 
         const classes = useStyles();
 
         return (
           <div className="ContactForm">
+            <PageHeader header={props.ContactForm} />
             <Container fluid>
-                <Paper elevation={5}>
-                    <form className={classes.root}>
-                      <TextField id="standard-basic" label="Name" />
-                      <TextField id="standard-basic" label="Email" />
-                      <TextField id="standard-basic" label="Group Size" />
-                      <TextField multiline rows={5} id="outlined-basic" label="Enquiry" variant='outlined'/>
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        className={classes.button}
-                        startIcon={<SendIcon/>}
-                        elevation={3}
-                      >Send</Button>
-                    </form>
-                </Paper>
+              <Paper elevation={5}>
+                <form className={classes.root}>
+                  <TextField id="standard-basic" label="Name" />
+                  <TextField id="standard-basic" label="Email" />
+                  <TextField id="standard-basic" label="Group Size" />
+                  <TextField
+                    multiline
+                    rows={5}
+                    id="outlined-basic"
+                    label="Enquiry"
+                    variant="outlined"
+                  />
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className={classes.button}
+                    startIcon={<SendIcon />}
+                    elevation={3}
+                  >
+                    Send
+                  </Button>
+                </form>
+              </Paper>
             </Container>
+            <Fab
+              variant="round"
+              color="primary"
+              aria-label="add"
+              style={{
+                zIndex: 2,
+                position: "fixed",
+                bottom: "5px",
+                right: "5px",
+                fontSize: "10px",
+              }}
+            >
+              {/* <AddIcon /> */}
+              {/* Add Review */}
+              <Link smooth={false} to="/contact/#contact" style={{ color: "white" }}>
+                <MailOutlineIcon />
+              </Link>
+            </Fab>
           </div>
         );
     }

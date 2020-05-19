@@ -11,6 +11,8 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import PageHeader from './PageHeader';
+import { headers } from "../data/headers";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,11 +24,14 @@ const useStyles = makeStyles((theme) => ({
   }, 
 }));
 
+const props = headers;
+
 export default function TestimonialForm() {
   const classes = useStyles();
 
   return (
     <div className="TestimonialForm">
+      <PageHeader header={props.ReviewForm}/>
       <Container fluid>
         <Paper elevation={5}>
           <form className={classes.root}>
@@ -38,14 +43,14 @@ export default function TestimonialForm() {
               label="Testimonial"
               variant="outlined"
             />
-            <Button
+            {/* <Button
               variant="contained"
               color="default"
               className={classes.button}
               startIcon={<CloudUploadIcon />}
             >
               Upload Image
-            </Button>
+            </Button> */}
             <Button
               variant="contained"
               color="secondary"

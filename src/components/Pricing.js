@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createRef} from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -16,7 +16,6 @@ import './Pricing.css'
 import {headers} from '../data/headers';
 import PageHeader from './PageHeader';
 
-
 const useStyles = makeStyles({
   root: {
     maxWidth: '400px',
@@ -26,7 +25,10 @@ const useStyles = makeStyles({
 
 const props = headers
 
+const scrollDiv = createRef()
+
 export default function Pricing() {
+  
   const classes = useStyles();
 
   // const data = {pricing}

@@ -1,10 +1,10 @@
-.Navigation-navbar *{
-    font-size: 1.1em;
-    margin: 0 10px 0 10px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-} 
+.menu{
+    /* float:right; */
+}
 
-.Navigation-navbar .about{
-    color: red;
+.fixed {
+  width: 100%;  
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }

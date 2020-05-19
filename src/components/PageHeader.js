@@ -10,7 +10,9 @@ const useStyles = makeStyles({
     borderImageSource:
       'linear-gradient(to right, orange , rgb(243, 243, 243))',
     borderImageSlice: 1,
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: '30px',
+    marginBottom: '20px'
   },
 });
 

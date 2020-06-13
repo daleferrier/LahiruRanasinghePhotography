@@ -61,7 +61,7 @@ export default function ContactForm() {
               </Paper>
             </Container>
             <Fab
-              variant="round"
+              variant="extended"
               color="primary"
               aria-label="add"
               style={{
@@ -69,13 +69,18 @@ export default function ContactForm() {
                 position: "fixed",
                 bottom: "5px",
                 right: "5px",
-                fontSize: "10px",
+                fontSize: "12px",
               }}
             >
               {/* <AddIcon /> */}
               {/* Add Review */}
-              <Link smooth={false} to="/contact/#contact" style={{ color: "white" }}>
-                <MailOutlineIcon />
+              <Link
+                smooth={false}
+                to="/contact/#contact"
+                style={{ color: "white" }}
+              >
+                Get in touch
+                {/* <MailOutlineIcon /> */}
               </Link>
             </Fab>
           </div>

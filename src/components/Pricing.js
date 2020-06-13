@@ -15,6 +15,11 @@ import pricing from "../data/pricing";
 import './Pricing.css'
 import {headers} from '../data/headers';
 import PageHeader from './PageHeader';
+import DesktopPricing from '../components/desktop/DesktopPricing'
+import { useMediaQuery } from "react-responsive";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
+import { CardHeader } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -23,20 +28,106 @@ const useStyles = makeStyles({
   },
 });
 
-const props = headers
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 991 });
+  return isMobile ? children : null;
+};
 
-const scrollDiv = createRef()
+function Sonnet(){
+  return(
+    <div>
+      dale ferrier
+    </div>
+  )
+}
 
-export default function Pricing() {
+function Price(){
+  const classes = useStyles()
+  return (
+    <Container fluid>
+      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className='justify-content-between'>
+        <Tab eventKey="home" title="Family">
+          <Card>
+            <CardHeader title="dale" />
+            <CardContent>
+              <Typography>
+                It has roots in a piece of classical Latin literature from 45 BC,
+                making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of
+                the more obscure Latin words, consectetur, from a Lorem Ipsum
+                passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source. Lorem Ipsum comes
+                from sections 1.10.32 and 1.10.33 of "d
+              </Typography>
+            </CardContent>
+          </Card>
+        </Tab>
+        <Tab eventKey="profile" title="Couple">
+          <Card>
+            <CardHeader title="dale" />
+            <CardContent>
+              <Typography>
+                It has roots in a piece of classical Latin literature from 45 BC,
+                making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of
+                the more obscure Latin words, consectetur, from a Lorem Ipsum
+                passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source. Lorem Ipsum comes
+                from sections 1.10.32 and 1.10.33 of "d
+              </Typography>
+            </CardContent>
+          </Card>
+        </Tab>
+        <Tab eventKey="contact" title="Individual">
+          <Card>
+            <CardHeader title="dale" />
+            <CardContent>
+              <Typography>
+                It has roots in a piece of classical Latin literature from 45 BC,
+                making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of
+                the more obscure Latin words, consectetur, from a Lorem Ipsum
+                passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source. Lorem Ipsum comes
+                from sections 1.10.32 and 1.10.33 of "d
+              </Typography>
+            </CardContent>
+          </Card>
+        </Tab>
+      </Tabs>
+    </Container>
+  );
+}
+
+
+export default function Pricing(){
+  return(
+    <div>
+      <Mobile>
+        <PageHeader header={headers.Pricing}/>
+        <Price/>
+      </Mobile>
+      <DesktopPricing/>
+    </div>
+  )
+}
+
+
+// const props = headers
+
+// const scrollDiv = createRef()
+
+// export default function Pricing() {
   
-  const classes = useStyles();
+//   const classes = useStyles();
 
   // const data = {pricing}
 
-  return (
+  // return (
 
-    <div className='Pricing'>
-          <PageHeader header={props.Pricing}/>
+    // <div className='Pricing'>
+          {/* <DesktopPricing/> */}
+          {/* <PageHeader header={props.Pricing}/>
           {pricing.map((m) => (
             <Card className={classes.root}>
               <CardActionArea>
@@ -58,7 +149,7 @@ export default function Pricing() {
                 </CardContent>
               </CardActionArea>
             </Card>
-          ))}
-    </div>
-  );
-}
+          ))} */}
+    {/* </div> */}
+  {/* ); */}
+{/* } */}

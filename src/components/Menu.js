@@ -41,10 +41,10 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>
-          <Link smooth={true} to="/gallery/#gallery">
+        <MenuItem onClick={handleClose} component={Link} to='/gallery/#gallery'>
+          {/* <Link smooth={true} to="/gallery/#gallery"> */}
             <PhotoLibraryIcon /> Gallery
-          </Link>
+          {/* </Link> */}
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link smooth={true} to="/profile/#profile">

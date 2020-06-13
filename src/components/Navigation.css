@@ -2,9 +2,56 @@
     /* float:right; */
 }
 
+.Navigation{
+}
+
 .fixed {
   width: 100%;  
   position: fixed;
   top: 0;
   z-index: 2;
 }
+
+.hidden{
+  visibility: hidden;
+}
+
+
+.hidden-fadeOut{
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.visible{
+  visibility: visible;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.Nav-heading{
+  font-size: 5vw;
+  font-family: LahiruFont;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+

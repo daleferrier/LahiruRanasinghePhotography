@@ -17,19 +17,17 @@ class Gallery extends Component{
     }
 
     render(){
-        return(
-            <div className='Gallery'>
-                <PageHeader header = {this.props.headers.Gallery}/>
+        return (
+          <div className="Gallery">
+            <PageHeader header={this.props.headers.Gallery} />
 
-                <CardColumns className='card-columns'>
-                    {this.props.Images.map(m=>(
-                            <PhotoCard image={m}/>
-                    ))}
-                </CardColumns>
+            <CardColumns  className="">
+              {this.props.Images.map((m) => (
+                <PhotoCard image={m} />
+              ))}
+            </CardColumns>
 
-
-
-                {/* <Container fluid>
+            {/* <Container fluid>
                     <CardColumns className='card-columns'>
                         <Row>
                             {this.props.Images.map(m=>(
@@ -40,8 +38,8 @@ class Gallery extends Component{
                         </Row>
                     </CardColumns>
                 </Container> */}
-            </div>
-        )
+          </div>
+        );
     } 
 }
 

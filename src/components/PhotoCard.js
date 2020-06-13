@@ -60,7 +60,7 @@ const handleClickOpen = () => {
   };
 
     return (
-      <div className="PhotoCard">
+      <div className="PhotoCard" style={{display: 'inline-block'}}>
         <Card onClick={handleClickOpen}>
           <Card.Img className="PhotoCard-img" src={props.image} />
         </Card>

@@ -1,0 +1,21 @@
+.DesktopProfile-row{
+    height: 70vh;
+    /* border: 2px solid red; */
+}
+
+.DesktopProfile-container{
+    /* border: 2px solid red; */
+    /* height: 90vh; */
+}
+
+p{
+    margin-right: 20%;
+}
+
+.DesktopProfile-image{
+    box-shadow: 2px 7px 13px -5px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    /* border: solid red 2px; */
+}
+
+

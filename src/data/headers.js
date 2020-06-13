@@ -2,7 +2,7 @@ const headers =
     {
         ProfilePage: 'About me',
         Testimonials: 'Testimonials',
-        Pricing: 'Pricing',
+        Pricing: 'Your Experience',
         Gallery: 'Gallery',
         ContactForm: 'Get in touch',
         ReviewForm: 'Leave a review'

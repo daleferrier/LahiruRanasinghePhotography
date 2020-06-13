@@ -2,6 +2,7 @@ import React, {Component, createRef, useRef, useState, useEffect} from 'react';
 import Navigation from './components/Navigation'
 import ProfilePage from './components/ProfilePage'
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from './components/LandingPage';
 import Gallery from './components/Gallery';
 import ContactForm from './components/ContactForm';
@@ -11,7 +12,6 @@ import Pricing from './components/Pricing';
 import { Route, Switch, Link, NavLink } from "react-router-dom";
 import LogoSVG from "./images/logo.svg";
 import {makeStyles} from  '@material-ui/core/styles'
-import { useMediaQuery } from "react-responsive";
 
 const useStyles = makeStyles({
    padding:{
@@ -19,14 +19,9 @@ const useStyles = makeStyles({
    }
 })
 
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 991 });
-  return isMobile ? children : null;
-};
-
 function Logo() {
   return (
-    <Mobile ><img className='App-logo-svg' src={LogoSVG} /></Mobile >
+    <img className='App-logo-svg' src={LogoSVG} />
   );
 }
 export default function App(props) {
@@ -40,10 +35,9 @@ export default function App(props) {
     if (navRef.current.offsetTop != 0) {
       setPosition(navRef.current.offsetTop);
     }
-  
+
     const landing = landingRef.current;
-    const isTop = document.body.scrollTop >= position;
-    // const isTop = window.scrollY >= position;
+    const isTop = window.scrollY >= position;
     
     if (isTop) {
       console.log(isTop)
@@ -54,28 +48,33 @@ export default function App(props) {
   };
   
 
-  // useEffect(() => {
-  //   document.body.addEventListener("scroll", scrollListener);
-  //   // window.addEventListener("scroll", scrollListener);
-  //   return () => { 
-  //     document.body.removeEventListener('scroll', scrollListener);
-  //     // window.removeEventListener('scroll', scrollListener);
-  //   };
-  // });
+  useEffect(() => {
+    window.addEventListener("scroll", scrollListener);
+    return () => { 
+      window.removeEventListener('scroll', scrollListener);
+    };
+  });
 
     return (
       <div className="App">
-        <div className='Tabs'>
-          {/* <Tabs/> */}
-        </div>
         <div className="NavAndLandingPage" id="landing">
           <div className="App-logo">
-            {/* <Logo /> */}
+            <Logo />
           </div>
           <div className="App-Navigation" ref={navRef}>
             <Navigation />
           </div>
-          <div ref={landingRef} className='landingPage'>
+
+          {/* <Switch>
+            <Route exact path="/" render={() => <LandingPage />} />
+            <Route exact path="/gallery" render={() => <Gallery />} />
+            <Route exact path="/pricing" render={() => <Pricing />} />
+            <Route exact path="/testimonials" render={() => <Testimonials />} />
+            <Route exact path="/profile" render={() => <ProfilePage />} />
+            <Route exact path="/contact" render={() => <ContactForm />} />
+            <Route exact path="/review" render={() => <TestimonialForm />} />
+          </Switch> */}
+          <div ref={landingRef}>
             <LandingPage />
           </div>
         </div>
@@ -88,9 +87,10 @@ export default function App(props) {
         <div className="App-testimonials" id="testimonials">
           <Testimonials />
         </div>
-        {/* <div className="App-review" id="review"> 
+        {/* <div className="App-review" id="review">
           <TestimonialForm />
         </div> */}
+        <div className="">{/* <TestimonialForm/> */}</div>
         <div className="App-pricing" id="pricing">
           <Pricing />
         </div>
@@ -99,7 +99,6 @@ export default function App(props) {
         </div>
 
         <Switch>
-          {/* <Route exact path="/gallery" render={() => <Gallery/>} /> */}
           {/* <Route exact path="/" render={() => <LandingPage />} /> */}
           <Route exact path="/gallery" />
           <Route exact path="/landing" />

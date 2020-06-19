@@ -12,6 +12,8 @@ import { Route, Switch, Link, NavLink } from "react-router-dom";
 import LogoSVG from "./images/logo.svg";
 import {makeStyles} from  '@material-ui/core/styles'
 import { useMediaQuery } from "react-responsive";
+import ReactSlickCarousel from './components/desktop/ReactSlickCarousel';
+
 
 const useStyles = makeStyles({
    padding:{
@@ -65,17 +67,17 @@ export default function App(props) {
 
     return (
       <div className="App">
-        <div className='Tabs'>
-          {/* <Tabs/> */}
-        </div>
+        {/* <div>
+          <ReactSlickCarousel/>
+        </div> */}
+        <div className="Tabs">{/* <Tabs/> */}</div>
         <div className="NavAndLandingPage" id="landing">
-          <div className="App-logo">
-            {/* <Logo /> */}
-          </div>
+          <div className="App-logo">{/* <Logo /> */}</div>
+
           <div className="App-Navigation" ref={navRef}>
             <Navigation />
           </div>
-          <div ref={landingRef} className='landingPage'>
+          <div ref={landingRef} className="landingPage">
             <LandingPage />
           </div>
         </div>
@@ -97,7 +99,6 @@ export default function App(props) {
         <div className="App-Contact" id="contact">
           <ContactForm />
         </div>
-
         <Switch>
           {/* <Route exact path="/gallery" render={() => <Gallery/>} /> */}
           {/* <Route exact path="/" render={() => <LandingPage />} /> */}

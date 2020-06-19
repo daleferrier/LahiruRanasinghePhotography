@@ -13,6 +13,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
 import Menu from "../components/Menu";
 import { useMediaQuery } from "react-responsive";
+import ReactSlickCarousel from '../components/desktop/ReactSlickCarousel'
 
 const useStyles = makeStyles({
   title: {
@@ -80,7 +81,8 @@ export default function LandingPage() {
       {/* <div className={classes.carousel}> */}
       <Desktop>
         <div className={classes.desktop}>
-          <LandingCarousel />
+          <ReactSlickCarousel />
+          {/* <LandingCarousel /> */}
         </div>
       </Desktop>
     </div>

@@ -53,4 +53,18 @@ const Images = [
   "https://images.unsplash.com/photo-1502943693086-33b5b1cfdf2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
 ];
 
-export {Images};
+const carouselImages = [
+  "2020-06-1.jpg",
+  "2020-06-2.jpg",
+  // "2020-06-3.jpg",
+  // "2020-06-4.jpg",
+  "2020-06-5.jpg",
+  "2020-06-6.jpg",
+  // "2020-06-7.jpg",
+  // "2020-06-8.jpg",
+  "2020-06-9.jpg",
+  "2020-06-10.jpg",
+  "2020-06-11.jpg",
+];
+
+export {Images, carouselImages};

@@ -1,0 +1,31 @@
+.ReactSwipeCarousel {
+  /* border: 2px solid red; */
+    width: 100vw;
+    height: 100vh;
+    /* line-height: 100vh; */
+}
+
+.ReactSwipeCarousel div {
+    text-align: center;
+  /* border: 2px dashed blue; */
+  /* pointer-events: none; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.ReactSwipeCarousel div:focus {
+  outline: none;
+}
+
+.ReactSwipeCarousel div img {
+    max-height: 90%;
+    max-width: 90%;
+    height: auto;
+    width: auto;
+  pointer-events: all;
+  /* border: 2px dotted green; */
+  /* vertical-align: middle; */
+  margin: auto;
+}
+
+

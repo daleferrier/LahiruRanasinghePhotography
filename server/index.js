@@ -5,10 +5,10 @@ const app=express();
 var path = require("path");
 
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.use(bodyParser.json());
@@ -36,7 +36,7 @@ app.post('/contact', (req, res)=>{
 
         let mailOptions = {
           from: "daleferrier@hotmail.com",
-          to: "treasurebox.photo.uk@gmail.com",
+          to: "daleferrier@gmail.com",
           subject: "TreasureBox Photography Enquiry", // Subject line
           text: req.body.details.enquiry, // plain text body
           html: htmlEmail, // html body
@@ -59,7 +59,7 @@ app.post('/contact', (req, res)=>{
     
 })
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log("App is listening on port " + port);

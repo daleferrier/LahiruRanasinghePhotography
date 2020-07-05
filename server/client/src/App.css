@@ -1,0 +1,96 @@
+.App{
+    /* overflow: auto; */
+    /* scroll-snap-type: y mandatory; */
+    /* height: 100vh; */
+}
+.App::-webkit-scrollbar{
+    /* display: none; */
+}
+
+.App-Navigation{
+    /* padding-bottom: 100px; */
+}
+
+.App-gallery{
+    /* margin-bottom: 30px; */
+    height: 100vh;
+    /* scroll-snap-align: start; */
+}
+    
+
+.App-logo{
+    /* text-align: center;
+    position: relative;
+    z-index: 2; */
+} 
+
+.App-pricing{
+    scroll-snap-align: start;
+    padding-top: 10px;
+}
+
+@keyframes logo{
+    0%{
+        transform: scale(1, 1);
+    }
+    100%{
+        transform: translate(-167px, 78px) scale(0.3);
+    }
+}
+
+.App-logo-svg{
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    /* animation: logo 1s 2s linear forwards; */
+}
+
+.landingPage{
+}
+
+.padding{
+    /* padding-top: 56px; */
+}
+
+.NavAndLandingPage{
+    /* scroll-snap-align: start; */
+    /* padding-top: 20px; */
+    /* height: 100vh; */
+}
+
+.App-ProfilePage{
+    scroll-snap-align: start;
+    /* height: 100vh; */
+    padding-top: 30px;
+}
+
+.App-Contact{
+    /* scroll-snap-align: start; */
+    margin: 30px 0;
+    /* height: 100vh; */
+}
+
+.App-testimonials{
+    /* height: 100vh; */
+    scroll-snap-align: start;
+}
+
+
+
+
+
+
+/* The animation code */
+/* @keyframes logo {
+  from {height: 70px;}
+  to {height: 30px;}
+} */
+
+/* The element to apply the animation to */
+/* .App-logo {
+    animation-name: logo;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-duration: 4s; 
+} */

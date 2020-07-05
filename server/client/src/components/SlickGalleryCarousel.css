@@ -1,0 +1,44 @@
+.SlickGalleryCarousel{
+    pointer-events: none;
+}
+
+.SlickGalleryCarousel div{
+    display: flex;
+    align-items: center;
+    /* pointer-events: none; */
+}
+.SlickGalleryCarousel div:focus{
+    outline: none;
+}
+
+.SlickGalleryCarousel img{
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    width: auto;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* background-color: transparent; */
+    pointer-events: all;
+}
+
+.slick-track{
+    /* background-color: transparent !important; */
+}
+
+.slick-arrow{
+    pointer-events: all;
+    /* border: 2px solid red; */
+}
+
+.slick-prev:before, .slick-next:before {
+    color: rgb(255, 255, 255);
+    filter: invert(100%);
+}
+
+.slick-slide {
+  /* transition: transform 0.1s cubic-bezier(1, 1, 0, 0) !important; */
+  transition: transform 0.1s ease-out !important
+}
+

@@ -9,16 +9,16 @@ export default function ReactSlickCarousel(){
     const settings = {
       className: "center",
       centerMode: true,
-      infinite: true,  
+      infinite: true,
       centerPadding: "40px",
       slidesToShow: 5,
       // lazyLoad: true,
       focusOnSelect: true,
-      // speed: 5000,
-      // autoplay: true,
-      // autoplaySpeed: 0,
-      // cssEase: "linear",
-      // pauseOnHover: false,
+      speed: 2000,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      cssEase: "cubic-bezier(0.5, 1, 0.89, 1)",
+      pauseOnHover: false,
       arrows: false,
 
       responsive: [

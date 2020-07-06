@@ -71,6 +71,7 @@ const handleClickOpen = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  
 
     return (
       <div className="PhotoCard" style={{ display: "inline-block" }}>

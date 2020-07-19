@@ -1,0 +1,10 @@
+.Experience p{
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* justify-content: stretch; */
+}
+
+.Experience-text{
+    margin: 2vh 24px;
+}

@@ -23,6 +23,8 @@ import { Mobile } from "./functions/helperFunctions";
 import { Desktop } from "./functions/helperFunctions";
 import Fab from "@material-ui/core/Fab";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LandingAnimation from './components/LandingAnimation'
+import BottomNavigation from './components/BottomNavigation'
 
 const useStyles = makeStyles({
   padding: {
@@ -48,7 +50,7 @@ function HomePageComponents() {
   return (
     <div>
       {/* <Navigation /> */}
-      <LandingPage />
+     <div className='App-landingPage'> <LandingPage /></div>
       <div style={{}}>
         <ProfilePage />
       </div>
@@ -61,7 +63,7 @@ function HomePageComponents() {
 function FloatingButton() {
   const classes = useStyles();
   return (
-    <div>
+    <div className='FloatingButton'>
       <Desktop>
         <Fab
           variant="extended"
@@ -174,9 +176,11 @@ export default function App(props) {
 
       <div className="App-Navigation" ref={navRef}>
         {/* <ReactSwipe/> */}
+        {/* <LandingAnimation/> */}
         <Navigation />
-        <FloatingButton />
+        {/* <Mobile><BottomNavigation/></Mobile> */}
       </div>
+      <FloatingButton />
       {/* <div ref={landingRef} className="landingPage">
             <LandingPage />
           </div>
@@ -258,7 +262,7 @@ export default function App(props) {
               <Mobile>
                 <NavigationIndividual />
               </Mobile>
-              <ContactForm/>{" "}
+              <ContactForm />{" "}
             </React.Fragment>
           )}
         />

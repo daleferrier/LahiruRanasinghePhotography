@@ -12,6 +12,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import Slide from '@material-ui/core/Slide'
 import { Desktop } from "../functions/helperFunctions";
 import { Mobile } from "../functions/helperFunctions";
+import MenuDrawer from './MenuDrawer'
 
 const useStyles = makeStyles({
   AppBar:{
@@ -76,6 +77,7 @@ function NavigationMobile(){
             <Typography className={classes.title}>
               Treasurebox Photography
             </Typography>
+            {/* <MenuDrawer /> */}
             <Menu />
           </Toolbar>
         </AppBar>

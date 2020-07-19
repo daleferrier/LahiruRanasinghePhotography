@@ -14,12 +14,15 @@ export default function ReactSlickCarousel(){
       slidesToShow: 5,
       // lazyLoad: true,
       focusOnSelect: true,
-      speed: 2000,
-      autoplay: true,
-      autoplaySpeed: 1000,
+      speed: 100,
+      // speed: 2000,
+      // autoplay: true,
+      autoplaySpeed: 0,
+      // autoplaySpeed: 1000,
       cssEase: "cubic-bezier(0.5, 1, 0.89, 1)",
-      pauseOnHover: false,
+      pauseOnHover: true,
       arrows: false,
+      swipeToSlide: true,
 
       responsive: [
         {

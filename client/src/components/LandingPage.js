@@ -12,10 +12,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
 import MenuDots from "../components/Menu-dots";
+import Menu from "../components/Menu";
 import { useMediaQuery } from "react-responsive";
 import ReactSlickCarousel from '../components/desktop/ReactSlickCarousel'
 import {Desktop} from '../functions/helperFunctions'
 import {Mobile} from '../functions/helperFunctions'
+import ReactSwipeLandingCarousel from './ReactSwipeLandingCarousel'
 
 const useStyles = makeStyles({
   title: {
@@ -29,7 +31,7 @@ const useStyles = makeStyles({
     textAlign: "center",
     marginLeft: 0,
     marginRight: 0,
-    padding: 0
+    padding: 0,
     // paddingTop: "2vh",
   },
   carousel: {
@@ -43,8 +45,10 @@ const useStyles = makeStyles({
     // paddingTop: "20vh",
   },
   dots: {
-    marginLeft: '90vw'
+    marginLeft: '85vw',
     // float: 'right',
+    paddingTop: '2vh'
+
   }
 });
 
@@ -70,6 +74,7 @@ function LandingPageHeader() {
     <div>
       <Container className={classes.container}>
         <div className={classes.dots}><MenuDots/></div>
+        {/* <div className={classes.dots}><Menu/></div> */}
         {/* <div className={classes.dots}><MenuIcon/></div> */}
         <Logo />
         <Typography className={classes.title}>
@@ -88,6 +93,7 @@ export default function LandingPage() {
     <div>
       <Mobile className={classes.mobile}>
         <LandingPageHeader />
+        {/* <ReactSwipeLandingCarousel/> */}
         <ReactSlickCarousel />
         {/* <LandingCarousel /> */}
       </Mobile>

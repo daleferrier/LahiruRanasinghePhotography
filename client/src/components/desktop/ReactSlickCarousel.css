@@ -1,13 +1,32 @@
 .ReactSlickCarousel{
     /* margin:  0 2%; */
     /* margin: 0; */
+    /* margin-top: 15vh; */
 }
 
 .slick-next, .slick-prev {
     filter: invert(100%);
 }
 
+@keyframes picMargins{
+    0%{
+        opacity: 0.000001;
+        padding: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        padding: 10px 3px 15px 3px;
+    }
+}
+
 .ReactSlickCarousel div{
+    /* border: 2px solid blue; */
+    /* animation-name: picMargins;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; */
     /* background-color: aquamarine; */
     margin: 10px 3px 15px 3px;
     display: flex;

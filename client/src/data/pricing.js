@@ -1,24 +1,36 @@
 const pricing = [
   {
-    photo_url: "family.jpg",
-    package: "Family Portrait",
-    description:
-      "Awesome Family portraits. t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    price: "$100",
+    // photo_url: "family.jpg",
+    eventkey: "Classic",
+    title: "Classic £249",
+    package: "Classic £249",
+    description: ["10 digital images"],
+    price: "£249",
   },
   {
-    photo_url: "couple.jpg",
-    package: "Couple's Portrait",
-    description:
-      "Awesome Couple portraits. t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    price: "$200",
+    // photo_url: "couple.jpg",
+    eventkey: "Treasurebox",
+    title: "Treasurebox £349",
+    package: "Treasurebox £349",
+    description: [
+      "15 digital images",
+      '15 7x5" prints in a personalised wooden presentation box',
+    ],
+    price: "£349",
   },
   {
-    photo_url: "portrait.jpeg",
-    package: "Individual Portrait",
-    description:
-      "Awesome Individual portraits. t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    price: "$300",
+    // photo_url: "portrait.jpeg",
+    eventkey: "Full Monty",
+    title: "Full Monty £499",
+    package: "Full Monty £499",
+    description: [
+      "15+ digital images",
+      '15+ 7x5" prints in a personalised wooden presentation box',
+      "USB with digital images",
+      'Single large 15x10" print',
+      "Mounted photo collage or A4 photobook",
+    ],
+    price: "£499",
   },
 ];
 

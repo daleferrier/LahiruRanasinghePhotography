@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
     "popper": "^1.0.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -25,8 +26,7 @@
     "react-slick": "^0.26.1",
     "react-swipe": "^6.0.4",
     "slick-carousel": "^1.8.1",
-    "swipe-js-iso": "^2.1.5",
-    "swiper": "^6.0.0"
+    "swipe-js-iso": "^2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

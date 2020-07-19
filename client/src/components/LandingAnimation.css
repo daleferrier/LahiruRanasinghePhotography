@@ -1,0 +1,16 @@
+.LandingAnimation{
+    animation: box 5s infinite;
+}
+
+
+@keyframes box{
+    0% {
+        transform: skew(0)
+    }
+    50%{
+        transform: skew(20deg)
+    }
+    100%{
+        transform: skew(0)
+    }
+}

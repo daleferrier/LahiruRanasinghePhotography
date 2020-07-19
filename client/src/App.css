@@ -7,9 +7,44 @@
     /* display: none; */
 }
 
-.App-Navigation{
-    /* padding-bottom: 100px; */
+
+@keyframes navAnimation{
+    0%{
+        opacity: 0;
+        /* transform: translate3d(0,60px,0); */
+    }
+    25%{
+        opacity: 0;
+        transform: translate3d(0,60px,0);
+    }
+    /* 50%{
+        opacity: 0.5;
+        transform: translate3d(0,0px,0);
+    }
+    75%{
+        opacity: 0.5;
+        transform: translate3d(0,0px,0);
+    } */
+    100%{
+        transform: translate3d(0,0px,0);
+        opacity: 1;
+    }
 }
+
+.testP{
+    opacity: 0;
+}
+
+.App-Navigation{
+    
+    /* animation: navAnimation ease-out 3s;
+    animation-fill-mode: none; */
+    /* animation-delay: 2s; */
+}
+
+
+
+
 
 .App-gallery{
     /* margin-bottom: 30px; */

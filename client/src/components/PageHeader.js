@@ -6,6 +6,8 @@ import Container from "react-bootstrap/Container";
 import './PageHeader.css'
 import PhotographerSVG from "../images/photographer.svg";
 import CameraSVG from "../images/camera.svg";
+import {Mobile} from '../functions/helperFunctions'
+import {Desktop} from '../functions/helperFunctions'
 
 const useStyles = makeStyles({
   // root: {
@@ -22,24 +24,24 @@ const useStyles = makeStyles({
   // },
 });
 
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 992 });
-  return isDesktop ? children : null;
-};
+// const Desktop = ({ children }) => {
+//   const isDesktop = useMediaQuery({ minWidth: 992 });
+//   return isDesktop ? children : null;
+// };
 
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 991 });
-  return isMobile ? children : null;
-};
+// const Mobile = ({ children }) => {
+//   const isMobile = useMediaQuery({ maxWidth: 991 });
+//   return isMobile ? children : null;
+// };
 
-function PhotographerIcon() {
-  return (
-    <img
-      style={{ height: "5vw", margin: 0, padding: '0px 20px' }}
-      src={PhotographerSVG}
-    />
-  );
-}
+// function PhotographerIcon() {
+//   return (
+//     <img
+//       style={{ height: "5vw", margin: 0, padding: '0px 20px' }}
+//       src={PhotographerSVG}
+//     />
+//   );
+// }
 
 function TopHeaderDesktop(props){
   return (
@@ -60,15 +62,15 @@ function TopHeaderDesktop(props){
 
 function TopHeaderMobile(props){
   return (
-    <Jumbotron fluid>
-      <Container>
-        <h1>{props.header}</h1>
-        {/* <p>
+    // <Jumbotron fluid>
+    <Container className="TopHeaderMobile">
+      <h2 style={{ textAlign: 'center', textDecoration: "underline", margin: '25px 0px 25px 0px', padding: '10px 0px 10px 0px' }}>{props.header}</h2>
+      {/* <p>
           Have a good look at what I can do for you. Teeth, Eyebrow, anything you
           need
         </p> */}
-      </Container>
-    </Jumbotron>
+    </Container>
+    // </Jumbotron>
   );
 }
 

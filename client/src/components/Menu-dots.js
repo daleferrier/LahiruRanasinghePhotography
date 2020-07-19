@@ -56,7 +56,28 @@ export default function SimpleMenu() {
           <PhotoLibraryIcon /> Gallery
           {/* </Link> */}
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose} component={Link} to="/profile">
+          {/* <Link smooth={true} to="/gallery/#gallery"> */}
+          <PersonIcon /> Profile
+          {/* </Link> */}
+        </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/pricing">
+          {/* <Link smooth={true} to="/gallery/#gallery"> */}
+          <PaymentIcon /> Pricing
+          {/* </Link> */}
+        </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/testimonials">
+          {/* <Link smooth={true} to="/gallery/#gallery"> */}
+          <ReceiptIcon /> Testimonials
+          {/* </Link> */}
+        </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/contact">
+          {/* <Link smooth={true} to="/gallery/#gallery"> */}
+          <EmailIcon /> Get in touch
+          {/* </Link> */}
+        </MenuItem>
+
+        {/* <MenuItem onClick={handleClose}>
           <Link smooth={true} to="/profile">
             <PersonIcon /> Profile
           </Link>
@@ -76,11 +97,6 @@ export default function SimpleMenu() {
         <MenuItem onClick={handleClose}>
           <Link smooth={false} to="/contact">
             <EmailIcon /> Get in touch
-          </Link>
-        </MenuItem>
-        {/* <MenuItem onClick={handleClose}>
-          <Link smooth={true} to="/review/#review">
-            <RateReviewIcon /> Feedback
           </Link>
         </MenuItem> */}
       </Menu>

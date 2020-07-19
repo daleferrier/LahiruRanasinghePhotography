@@ -11,7 +11,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Family from "../images/family.jpg";
 import Portrait from "../images/portrait.jpeg";
 import Couple from "../images/couple.jpg";
-import pricing from "../data/pricing";
+// import pricing from "../data/pricing";
 import './Pricing.css'
 import {headers} from '../data/headers';
 import PageHeader from './PageHeader';
@@ -21,41 +21,73 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import { CardHeader } from "@material-ui/core";
 import NavigationIndividual from './NavigationIndividual'
+import {Mobile} from '../functions/helperFunctions'
+import {Desktop} from '../functions/helperFunctions'
+import Paper from '@material-ui/core/Paper'
+import pricing from '../data/pricing'
+import Experience from './Experience'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: '400px',
+    maxWidth: "400px",
     margin: "100px 10px 5px 10px",
+  },
+  cardBorder: {
+    borderLeft: "1px solid #dee2e6",
+    borderRight: "1px solid #dee2e6",
+    borderBottom: "1px solid #dee2e6",
+    borderRadius: 0,
   },
 });
 
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 991 });
-  return isMobile ? children : null;
-};
+// const Mobile = ({ children }) => {
+//   const isMobile = useMediaQuery({ maxWidth: 991 });
+//   return isMobile ? children : null;
+// };
 
-function Sonnet(){
-  return(
-    <div>
-      dale ferrier
-    </div>
-  )
-}
+// function Sonnet(){
+//   return(
+//     <div>
+//       dale ferrier
+//     </div>
+//   )
+// }
 
 function Price(){
   const classes = useStyles()
   return (
     <Container fluid>
-      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className='justify-content-between'>
-        <Tab eventKey="home" title="Family">
-          <Card>
+      <Tabs
+        defaultActiveKey={pricing[1].eventkey}
+        id="uncontrolled-tab-example"
+        className="justify-content-between"
+      >
+        {pricing.map((m) => (
+          <Tab eventKey={m.eventkey} title={m.eventkey} className="Pricing-tab">
+            <Card className={classes.cardBorder} elevation={0}>
+              <CardHeader title={m.price} />
+              <CardContent>
+                <Typography>
+                  <ul>
+                    {[...m.description].map((x) => (
+                      <li style={{ textAlign: "left" }}>{x}</li>
+                    ))}
+                  </ul>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Tab>
+        ))}
+
+        {/* <Tab eventKey="profile" title="Couple" className="Pricing-tab">
+          <Card elevation={0} className={classes.cardBorder}>
             <CardHeader title="dale" />
             <CardContent>
               <Typography>
-                It has roots in a piece of classical Latin literature from 45 BC,
-                making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of
-                the more obscure Latin words, consectetur, from a Lorem Ipsum
+                It has roots in a piece of classical Latin literature from 45
+                BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one
+                of the more obscure Latin words, consectetur, from a Lorem Ipsum
                 passage, and going through the cites of the word in classical
                 literature, discovered the undoubtable source. Lorem Ipsum comes
                 from sections 1.10.32 and 1.10.33 of "d
@@ -63,38 +95,22 @@ function Price(){
             </CardContent>
           </Card>
         </Tab>
-        <Tab eventKey="profile" title="Couple">
-          <Card>
+        <Tab eventKey="contact" title="Individual" className="Pricing-tab">
+          <Card elevation={0} className={classes.cardBorder}>
             <CardHeader title="dale" />
             <CardContent>
               <Typography>
-                It has roots in a piece of classical Latin literature from 45 BC,
-                making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of
-                the more obscure Latin words, consectetur, from a Lorem Ipsum
+                It has roots in a piece of classical Latin literature from 45
+                BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one
+                of the more obscure Latin words, consectetur, from a Lorem Ipsum
                 passage, and going through the cites of the word in classical
                 literature, discovered the undoubtable source. Lorem Ipsum comes
                 from sections 1.10.32 and 1.10.33 of "d
               </Typography>
             </CardContent>
           </Card>
-        </Tab>
-        <Tab eventKey="contact" title="Individual">
-          <Card>
-            <CardHeader title="dale" />
-            <CardContent>
-              <Typography>
-                It has roots in a piece of classical Latin literature from 45 BC,
-                making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of
-                the more obscure Latin words, consectetur, from a Lorem Ipsum
-                passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes
-                from sections 1.10.32 and 1.10.33 of "d
-              </Typography>
-            </CardContent>
-          </Card>
-        </Tab>
+        </Tab> */}
       </Tabs>
     </Container>
   );
@@ -102,16 +118,18 @@ function Price(){
 
 
 export default function Pricing(){
-  return(
+  return (
     <div>
       <Mobile>
         {/* <NavigationIndividual/> */}
-        <PageHeader header={headers.Pricing}/>
-        <Price/>
+        <PageHeader header={headers.Pricing} />
+        <Price />
+        <Experience />
       </Mobile>
-      <DesktopPricing/>
+      <DesktopPricing />
+      <Desktop><Experience /></Desktop>
     </div>
-  )
+  );
 }
 
 

@@ -1,11 +1,13 @@
 .DesktopProfile-row{
-    height: 70vh;
+    height: 65vh;
+    /* height: 50%; */
     /* border: 2px solid red; */
 }
 
 .DesktopProfile-container{
     /* border: 2px solid red; */
     /* height: 90vh; */
+    margin: 20px;
 }
 
 p{
@@ -18,4 +20,75 @@ p{
     /* border: solid red 2px; */
 }
 
+.ProfileTwoPics{
+    margin: 50px 10% 1% 10%;
+    display: grid;
+    grid-template-columns: 50% auto;
+    justify-items: center;
+}
+.ProfileTwoPics-Image{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+}
 
+.ProfileTwoPics-Image img{
+    max-height: auto;
+    max-width: 300px;
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+.ProfileTwoPics-Image .one{
+    margin: auto;
+    /* position: relative;
+    top: 10%;
+    left: 10%; */
+}
+.ProfileTwoPics-Image .two{
+    margin: auto;
+    /* position: relative;
+    top: -20%;
+    left: 15%; */
+}
+
+.ProfileTwoPics-Text {
+    display: grid;
+    align-items: center;
+}
+.ProfileTwoPics-Text p{
+    margin: 10% auto;
+    padding: 40px;
+    text-align: justify;
+}
+
+
+.ProfileGrid{
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.ProfileGrid > .ProfileGrid-image img{
+    max-height: auto;
+    max-width: 400px;
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+.ProfileGrid-text > p{
+    margin: auto;
+    /* margin: 5% 20% 5% 5%; */
+    text-align: justify;
+}
+/* .ProfileGrid-text{
+    max-width: auto;
+    max-height: 50vh;
+} */

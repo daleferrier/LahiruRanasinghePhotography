@@ -1,6 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import ProfilePic from "../../images/lahiru2.jpeg";
+import ProfilePicTwo from "../../images/gallery/F1.jpg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,40 +10,149 @@ import "./DesktopProfile.css";
 import Paper from "@material-ui/core/Paper";
 import { headers } from "../../data/headers";
 import PageHeader from "../PageHeader";
+import { Desktop } from "../../functions/helperFunctions";
 
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 992 });
-  return isDesktop ? children : null;
-};
+// const Desktop = ({ children }) => {
+//   const isDesktop = useMediaQuery({ minWidth: 992 });
+//   return isDesktop ? children : null;
+// };
 
+function ProfileTwoPics(){
+  return (
+    <div className="ProfileTwoPics">
+      <div className="ProfileTwoPics-Image">
+        <img className="one" src={ProfilePic} />
+        <img className="two" src={ProfilePicTwo} />
+      </div>
+      <div className="ProfileTwoPics-Text">
+        <p
+          style={{ fontFamily: "", fontSize: "1.1em", fontWeight: 400 }}
+          className="mh-100"
+        >
+          <span
+            style={{
+              fontSize: "3em",
+              lineHeight: "0.1em",
+              margin: -2,
+              fontFamily: "LahiruFont",
+              fontWeight: 400,
+              color: "black",
+            }}
+          >
+            H
+          </span>
+          i, I’m Lahiru. Thank you for visiting Treasurebox Photography!   As
+          cheesy as this is, to me, my camera is my treasure box. I use it to
+          capture and store the things that are most precious…memories. I would
+          love to meet you and your loved ones and create treasures for you too!
+          I have a very relaxed and informal style. My shoots are done in your
+          homes, gardens or in outdoor spaces like parks or woods and I do my
+          best to make it an enjoyable experience for the whole family.
+          Especially for the kids, I have dinosaur knowledge equivalent to a
+          four year old and I am an expert at animal sounds! I am based in
+          Ruislip, West London and happily travel to Harrow, Hillingdon,
+          Buckinghamshire, Hertfordshire and West London. If you would like me
+          to create some beautiful images for you and your loved ones, please do
+          get in in touch. I hope you’ll invite me to photograph you and your
+          family soon!   Lahiru
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ProfileGrid(){
+  return (
+    <div className="ProfileGrid">
+      <div className="ProfileGrid-image">
+        <img src={ProfilePic} />
+      </div>
+      <div className="ProfileGrid-text">
+        <p
+          style={{ fontFamily: "", fontSize: "1.1em", fontWeight: 400 }}
+          className=""
+        >
+          <span
+            style={{
+              fontSize: "2.5em",
+              lineHeight: "0.1em",
+              margin: -2,
+              fontFamily: "LahiruFont",
+              fontWeight: "600",
+              color: "black",
+            }}
+          >
+            H
+          </span>
+          i, I’m Lahiru Ranasinghe (I'm the bearded one at the back of the
+          photo). Thank you for visiting Treasurebox Photography! As cheesy as
+          this is, to me, my camera is my treasure box. I use it to capture and
+          store the things that are most precious…memories. I would love to meet
+          you and your loved ones and create treasures for you too! I have a
+          very relaxed and informal style. My shoots are done in your homes,
+          gardens or in outdoor spaces like parks or woods and I do my best to
+          make it an enjoyable experience for the whole family. Think of it as a
+          chilled out morning or afternoon with a friend…a friend who you've
+          just met, and who may ask you to stare into the distance and look
+          pensive while he clicks away! To entertain the kids, I have dinosaur
+          knowledge equivalent to a four year old and I am an expert at animal
+          sounds! I am based in Ruislip, West London and happily travel to
+          Harrow, Hillingdon, Buckinghamshire, Hertfordshire and West London. If
+          you would like me to create some beautiful images for you and your
+          loved ones, please do get in in touch. I hope you’ll invite me to
+          photograph you and your family soon!
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function Profile() {
   return (
     <div>
-      <PageHeader header={headers.ProfilePage}/>
+      {/* <PageHeader header={headers.ProfilePage} /> */}
       <Container fluid className="DesktopProfile-container">
         <Row className="DesktopProfile-row align-items-center">
           <Col className="text-center h-100">
             <img className="DesktopProfile-image mh-100" src={ProfilePic} />
           </Col>
           <Col>
-            <Row className=''>
-              <div>A little about me</div>
-            </Row>
+            <Row className="">{/* <div>A little about me</div> */}</Row>
             <Row>
-              <p className="mh-100">
-                Contrary to popular belief, Lorem Ipsum is not simply random text.
-                It has roots in a piece of classical Latin literature from 45 BC,
-                making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of
-                the more obscure Latin words, consectetur, from a Lorem Ipsum
-                passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes
-                from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-                Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-                BC. This book is a treatise on the theory of ethics, very popular
-                during the Renaissance. The first line of Lorem Ipsum, "Lorem
-                ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              <p
+                style={{ fontFamily: "", fontSize: "1.1em", fontWeight: 400 }}
+                className="mh-100"
+              >
+                <span
+                  style={{
+                    fontSize: "3em",
+                    lineHeight: "0.1em",
+                    margin: -2,
+                    fontFamily: "LahiruFont",
+                    fontWeight: '400',
+                    color: "black",
+                  }}
+                >
+                  H
+                </span>
+                i, I’m Lahiru Ranasinghe (I'm the bearded one at the back of
+                the photo). Thank you for visiting Treasurebox Photography! As
+                cheesy as this is, to me, my camera is my treasure box. I use it
+                to capture and store the things that are most precious…memories.
+                I would love to meet you and your loved ones and create
+                treasures for you too! I have a very relaxed and informal style.
+                My shoots are done in your homes, gardens or in outdoor spaces
+                like parks or woods and I do my best to make it an enjoyable
+                experience for the whole family. Think of it as a chilled out
+                morning or afternoon with a friend…a friend who you've just met,
+                and who may ask you to stare into the distance and look pensive
+                while he clicks away! To entertain the kids, I have dinosaur
+                knowledge equivalent to a four year old and I am an expert at
+                animal sounds! I am based in Ruislip, West London and happily
+                travel to Harrow, Hillingdon, Buckinghamshire, Hertfordshire and
+                West London. If you would like me to create some beautiful
+                images for you and your loved ones, please do get in in touch. I
+                hope you’ll invite me to photograph you and your family soon!
               </p>
             </Row>
           </Col>
@@ -55,7 +165,10 @@ function Profile() {
 export default function DesktopProfile(props) {
   return (
     <Desktop>
-      <Profile />
+      {/* <PageHeader header={headers.ProfilePage} /> */}
+      {(props.desktopLocation == "home" ? <ProfileGrid /> : <ProfileTwoPics />)}
+      {/* <Profile /> */}
+      {/* <ProfileTwoPics /> */}
     </Desktop>
   );
 }

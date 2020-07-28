@@ -53,10 +53,18 @@
     width: 50%;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
+    
+    justify-content: center;
 }
 .ContactFormMobile-button{
 box-shadow: 0px 0px 4px -1px rgba(0,0,0,1);
 -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,1);
 -moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,1);
 }
+
+.ContactFormMobile-privacy{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+

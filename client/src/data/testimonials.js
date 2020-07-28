@@ -9,27 +9,37 @@
 
 // export { testimonials };
 
-const testimonials=[
+const testimonials = [
   {
-    name: 'Ranasinghe Family',
-    photo:'family.jpg',
-    testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ornare ornare. Duis enim nunc, scelerisque ut ligula quis, ornare bibendum urna. Quisque tempus sem vel dignissim cursus. Suspendisse porta facilisis venenatis. Praesent venenatis malesuada sapien eget ornare. Maecenas vestibulum odio in neque fermentum egestas. Vivamus quis nibh vel nulla vestibulum molestie at in diam. Etiam hendrerit aliquam ligula, sed cursus arcu fringilla vulputate. Curabitur ultricies ut turpis et dignissim. Morbi tempor dui nunc, at tristique sem viverra faucibus. Nullam at sem justo.'
+    name: "Finella",
+    photo: "family.jpg",
+    testimonial:
+      "Lahiru, is honestly amazing! From start to finish he made us all feel so comfortable. The children were enthralled by his enthusiastic personality, and he had us all laughing and enjoying the whole experience. He even managed to grab the attention of our cat (the most difficult subject to photo) and captured incredible natural family photos. We absolutely love our photos - we will treasure them for years to come. Thank you so much.",
   },
   {
-    name: 'De Silva Family',
-    photo:'couple.jpg',
-    testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ornare ornare. Duis enim nunc, scelerisque ut ligula quis, ornare bibendum urna. Quisque tempus sem vel dignissim cursus. Suspendisse porta facilisis venenatis. Praesent venenatis malesuada sapien eget ornare. Maecenas vestibulum odio in neque fermentum egestas. Vivamus quis nibh vel nulla vestibulum molestie at in diam. Etiam hendrerit aliquam ligula, sed cursus arcu fringilla vulputate. Curabitur ultricies ut turpis et dignissim. Morbi tempor dui nunc, at tristique sem viverra faucibus. Nullam at sem justo.'
+    name: "Manveer",
+    photo: "couple.jpg",
+    testimonial:
+      "Thank you so much for the amazing photos/memories you created for us with the pictures you took. You captured some great moments. Some I didn’t even realise you took. Everyone was so at ease with you being there and that made even better shots. The kids always love seeing you and it’s great how you play around with them to get the exact shot you need. Thanks again for capturing great photos at a time where everything is so precious!",
   },
   {
-    name: 'TeethEyebrow Family',
-    photo:'portrait.jpeg',
-    testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ornare ornare. Duis enim nunc, scelerisque ut ligula quis, ornare bibendum urna. Quisque tempus sem vel dignissim cursus. Suspendisse porta facilisis venenatis. Praesent venenatis malesuada sapien eget ornare. Maecenas vestibulum odio in neque fermentum egestas. Vivamus quis nibh vel nulla vestibulum molestie at in diam. Etiam hendrerit aliquam ligula, sed cursus arcu fringilla vulputate. Curabitur ultricies ut turpis et dignissim. Morbi tempor dui nunc, at tristique sem viverra faucibus. Nullam at sem justo.'
+    name: "Surangi",
+    photo: "portrait.jpeg",
+    testimonial:
+      "We absolutely loved having our photos taken by Lahiru! He clearly has a passion for photography and this really shows in the beauty of his work and also in his incredibly warm personality. He was brilliant with our little ones, getting them to play and interact with each other in order to capture some candid shots we will treasure forever. His photos have taken pride of place in our home! Thank you Lahiru!",
   },
   {
-    name: 'TeethEyebrow Family',
-    photo:'portrait.jpeg',
-    testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ornare ornare. Duis enim nunc, scelerisque ut ligula quis, ornare bibendum urna. Quisque tempus sem vel dignissim cursus. Suspendisse porta facilisis venenatis. Praesent venenatis malesuada sapien eget ornare. Maecenas vestibulum odio in neque fermentum egestas. Vivamus quis nibh vel nulla vestibulum molestie at in diam. Etiam hendrerit aliquam ligula, sed cursus arcu fringilla vulputate. Curabitur ultricies ut turpis et dignissim. Morbi tempor dui nunc, at tristique sem viverra faucibus. Nullam at sem justo.'
+    name: "Bianca",
+    photo: "portrait.jpeg",
+    testimonial:
+      "Lahiru is a talented and charismatic photographer. He took photos of my 1 year old daughter, 3 year old son, husband, mother and I. He chose a beautiful park location amongst wildflowers. Lahiru was engaging with the kids and even imitated a peacock to get my son to face the camera! The finished photos were beautiful and creative. My favourite shot was a natural one where the kids were playing and Lahiru managed to capture that magical moment. I highly recommend Lahiru!.",
   },
-]
+  {
+    name: "Ravin",
+    photo: "portrait.jpeg",
+    testimonial:
+      "Looking at the portfolio at Treasurebox Photography it can be easily seen that Lahiru is a skilled photographer. Having used him on many occasions we can understand why. He has an eye to capture perfect images with the personality to make the moment feel natural. He is very versatile and has covered many different types of events for us including working with animals and children! His end product is as the name suggests, something to treasure.",
+  },
+];
 
 export { testimonials };

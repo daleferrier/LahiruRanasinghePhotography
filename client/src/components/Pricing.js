@@ -112,9 +112,22 @@ function Price(){
           </Card>
         </Tab> */}
       </Tabs>
+      <div style={{margin: '10px auto'}}>
+        <ul style={{padding: 20}}>
+          <li>
+            All prices include a £50 booking deposit. 
+          </li>
+          <li>
+            Additional images are
+            available and further products can be created according to your
+            requirements. Please contact me to discuss further if this is of
+            interest.
+          </li>
+        </ul>
+      </div>
     </Container>
   );
-}
+} 
 
 
 export default function Pricing(){
@@ -124,10 +137,10 @@ export default function Pricing(){
         {/* <NavigationIndividual/> */}
         <PageHeader header={headers.Pricing} />
         <Price />
-        <Experience />
+        {/* <Experience /> */}
       </Mobile>
       <DesktopPricing />
-      <Desktop><Experience /></Desktop>
+      {/* <Desktop><Experience /></Desktop> */}
     </div>
   );
 }

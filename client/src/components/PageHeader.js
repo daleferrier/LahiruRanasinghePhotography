@@ -64,7 +64,8 @@ function TopHeaderMobile(props){
   return (
     // <Jumbotron fluid>
     <Container className="TopHeaderMobile">
-      <h2 style={{ textAlign: 'center', textDecoration: "underline", margin: '25px 0px 25px 0px', padding: '10px 0px 10px 0px' }}>{props.header}</h2>
+      <h2 style={{ textAlign: 'center', margin: '25px 0px 25px 0px', padding: '10px 0px 10px 0px' }}>{props.header}</h2>
+      {/* <h2 style={{ textAlign: 'center', textDecoration: "underline", margin: '25px 0px 25px 0px', padding: '10px 0px 10px 0px' }}>{props.header}</h2> */}
       {/* <p>
           Have a good look at what I can do for you. Teeth, Eyebrow, anything you
           need

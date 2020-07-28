@@ -35,7 +35,7 @@ export default function ReactSlickCarousel(){
           },
         },
         {
-          breakpoint: 1500,
+          breakpoint: 1400,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -45,7 +45,7 @@ export default function ReactSlickCarousel(){
         {
           breakpoint: 1000,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
           },
         },

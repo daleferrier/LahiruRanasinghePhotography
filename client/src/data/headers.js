@@ -6,7 +6,8 @@ const headers =
         Gallery: 'Gallery',
         ContactForm: 'Get in touch',
         Experience: 'Your Experience',
-        ReviewForm: 'Leave a review'
+        ReviewForm: 'Leave a review',
+        Privacy: 'Privacy Policy'
     }
 
 export {headers}

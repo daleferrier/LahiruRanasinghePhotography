@@ -14,7 +14,7 @@ import Paper from "@material-ui/core/Paper";
 import { headers } from "../data/headers";
 import PageHeader from "./PageHeader";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import { HashLink as Link } from "react-router-hash-link";
+// import { HashLink as Link } from "react-router-hash-link";
 import Fab from "@material-ui/core/Fab";
 import axios from "axios";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -30,6 +30,8 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import CloseIcon from "@material-ui/icons/Close";
+import {Link} from "react-router-dom";
+// import { Route, Switch, Link, NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -176,7 +178,7 @@ function ContactDetails() {
       {/* <PageHeader header={props.ContactForm} /> */}
       <Paper
         elevation={3}
-        style={{ height: "50vh", width: "95vw", margin: "auto" }}
+        style={{ height: "auto", width: "95vw", margin: "auto" }}
       >
         <div style={{ textAlign: "center" }}>
           <ul style={{ listStyleType: "none", margin: 0, padding: 0 }}>
@@ -185,10 +187,10 @@ function ContactDetails() {
               <a href="tel:+447900690989">+447900690989</a>
               {/* +447900690989 */}
             </li>
-            <li style={{ margin: 40 }}>
+            <li style={{ margin: '40px 10px' }}>
               <EmailIcon style={{ margin: 10, fontSize: "2em" }} />
               <a href="mailto:treasurebox.photo.uk@gmail.com?subject=Photoshoot Enquiry&body=Hi%20Lahiru%20">
-                treasurebox.photo.uk@gmail.com
+                lahiru@treasureboxphotography.co.uk
               </a>
             </li>
             <li>
@@ -213,18 +215,23 @@ function ContactDetails() {
           </ul>
         </div>
         <div className="ContactFormMobile-icons" style={{}}>
-          <div>
+          <div style={{ margin: 5 }}>
             <FacebookIcon />
           </div>
-          <div>
+          <div style={{ margin: 5 }}>
             <InstagramIcon />
           </div>
-          <div>
+          {/* <div>
             <LinkedInIcon />
           </div>
           <div>
             <TwitterIcon />
-          </div>
+          </div> */}
+        </div>
+        <div className='ContactFormMobile-privacy'>
+          <Link to='/privacy'>
+            Privacy Policy
+          </Link>
         </div>
       </Paper>
     </div>

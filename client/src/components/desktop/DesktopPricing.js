@@ -63,8 +63,9 @@ function Prices() {
         <p></p>
         <div>All prices include a £50 booking deposit.</div>
         <div>
-          Personalised packages are available according to your requirements.
-          Please contact me to discuss further if this is of interest.
+          Additional images are available and further products can be created
+          according to your requirements. Please contact me to discuss further
+          if this is of interest.
         </div>
       </Container>
     </div>

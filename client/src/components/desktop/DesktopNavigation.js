@@ -1,24 +1,23 @@
-import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-// import {useMediaQuery} from 'react-responsive'
+import React, {useEffect} from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import AppBar from "@material-ui/core/AppBar";
-import {Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-// import { HashLink as Link } from "react-router-hash-link";
-import LogoSVG from '../../images/logo.svg'
-import Spacer from './Spacer'
+import LogoSVG from "../../images/logo.svg";
+import Spacer from "./Spacer";
 import { Mobile } from "../../functions/helperFunctions";
 import { Desktop } from "../../functions/helperFunctions";
+import "./DesktopNavigation.css";
 
 const useStyles = makeStyles({
-  appbar:{
-    padding: '20px 0px 0px 0px',
-    backgroundColor: 'white',
-    boxShadow: 'none'
+  appbar: {
+    padding: "20px 0px 0px 0px",
+    backgroundColor: "white",
+    boxShadow: "none",
   },
   root: {
     flexGrow: 1,
@@ -31,31 +30,116 @@ const useStyles = makeStyles({
     },
   },
   toolbar: {
-    justifyContent: 'center',
-    // justifyContent: "space",
+    justifyContent: "center",
     backgroundColor: "white",
-    paddingBottom: '30px'
+    paddingBottom: "30px",
   },
-  heading:{
-      fontSize: '5vw',
-      fontFamily: 'LahiruFont',
-      margin: 0,
-      padding: 0
-  }
+  heading: {
+    fontSize: "5vw",
+    fontFamily: "LahiruFont",
+    margin: 0,
+    padding: 0,
+  },
 });
-
-// const Desktop = ({ children }) => {
-//   const isDesktop = useMediaQuery({ minWidth: 992 });
-//   return isDesktop ? children : null;
-// };
 
 function Logo() {
   return (
-    <img style={{ height: "6vw", margin: 0, padding: '0px 20px 0px 0px' }} src={LogoSVG} />
+    <img
+      style={{ height: "6vw", margin: 0, padding: "0px 20px 0px 0px" }}
+      src={LogoSVG}
+    />
   );
 }
 
-function CenteredTabs() { 
+
+
+function DesktopNav() {
+  const classes = useStyles()
+  return (
+    <div className="DesktopNav">
+      <Toolbar className={classes.toolbar}>
+        <Link
+          smooth={true}
+          to="/"
+          // to="/landing/#landing"
+          // id="Nav-logo"
+          // className="hidden"
+        >
+          <Logo />
+        </Link>
+
+        <Typography>
+          {/* <h5 className='DesktopNavigation-heading'>TreasureBox Photography</h5> */}
+          <h5 className={classes.heading}>TreasureBox Photography</h5>
+        </Typography>
+      </Toolbar>
+      <div className="DesktopNav-nav">
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/gallery"
+              >
+                Gallery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/profile"
+              >
+                About Me
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/pricing"
+              >
+                Packages
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/testimonials"
+              >
+                Testimonials
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                className="DesktopNav-link"
+                activeClassName="DesktopNav-active"
+                to="/contact"
+              >
+                Get In Touch
+              </NavLink>
+            </li>
+      </div>
+    </div>
+  );
+}
+
+function CenteredTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -75,10 +159,11 @@ function CenteredTabs() {
               // id="Nav-logo"
               // className="hidden"
             >
-              <Logo/>
+              <Logo />
             </Link>
-  
+
             <Typography>
+              {/* <h5 className='DesktopNavigation-heading'>TreasureBox Photography</h5> */}
               <h5 className={classes.heading}>TreasureBox Photography</h5>
             </Typography>
           </Toolbar>
@@ -100,7 +185,7 @@ function CenteredTabs() {
               className={classes.tab}
               label="Gallery"
               component={Link}
-              smooth={false} 
+              smooth={false}
               to="/gallery"
               // to="/gallery/#gallery"
             />
@@ -143,13 +228,19 @@ function CenteredTabs() {
   );
 }
 
-export default function DesktopNavigation(){
-    return(
-        // <Desktop>
-            <div>
-              <Spacer/>
-              <CenteredTabs/>
-            </div>
-        // </Desktop>
-    );
+export default function DesktopNavigation() {
+  return (
+    // <Desktop>
+    <div>
+      {/* <Spacer/> */}
+      {/* <CenteredTabs/> */}
+      <div className='DesktopNav-fixed'>
+        <DesktopNav/>
+      </div>
+      <div className='DesktopNav-sticky'>
+        <DesktopNav />
+      </div>
+    </div>
+    // </Desktop>
+  );
 }

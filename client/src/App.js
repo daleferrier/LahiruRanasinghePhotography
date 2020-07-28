@@ -25,6 +25,8 @@ import Fab from "@material-ui/core/Fab";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LandingAnimation from './components/LandingAnimation'
 import BottomNavigation from './components/BottomNavigation'
+import Experience from "./components/Experience";
+import Privacy from "./components/Privacy";
 
 const useStyles = makeStyles({
   padding: {
@@ -50,12 +52,30 @@ function HomePageComponents() {
   return (
     <div>
       {/* <Navigation /> */}
-     <div className='App-landingPage'> <LandingPage /></div>
+      <div className="App-landingPage">
+        {" "}
+        <LandingPage />
+      </div>
       <div style={{}}>
-        <ProfilePage />
+        <ProfilePage location={"home"} />
       </div>
       <Pricing />
       <Testimonials />
+      {/* <div>
+        <Link
+          to="/privacy"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            color: "black",
+            outline: "none",
+            textDecoration: "none",
+            wordSpacing: "-2px",
+          }}
+        >
+          <p style={{ fontSize:'1.3em', borderTop: "2px solid black", margin: 'auto' }}>Privacy Policy</p>
+        </Link>
+      </div> */}
     </div>
   );
 }
@@ -86,8 +106,9 @@ function FloatingButton() {
           {/* <AddIcon /> */}
           {/* Add Review */}
           <Link
-            smooth={false}
-            to="/contact/#contact"
+            // smooth={false}
+            to="/contact"
+            // to="/contact/#contact"
             style={{ color: "black" }}
           >
             <MailOutlineIcon style={{ margin: "0px 10px 4px 0px" }} />
@@ -117,8 +138,9 @@ function FloatingButton() {
           {/* <AddIcon /> */}
           {/* Add Review */}
           <Link
-            smooth={false}
-            to="/contact/#contact"
+            // smooth={false}
+            // to="/contact/#contact"
+            to="/contact"
             style={{
               color: "black",
               outline: "none",
@@ -141,6 +163,13 @@ export default function App(props) {
   const navRef = useRef();
   const [position, setPosition] = useState(navRef.offsetTop);
   const [myPadding, setPadding] = useState(0);
+
+    const [location, setLocation] = useState(document.location.pathname);
+
+    useEffect(() => {
+      setLocation(document.location.pathname);
+      console.log(location);
+    });
 
   const scrollListener = () => {
     if (navRef.current.offsetTop != 0) {
@@ -226,7 +255,7 @@ export default function App(props) {
               <Mobile>
                 <NavigationIndividual />
               </Mobile>
-              <ProfilePage />
+              <ProfilePage location={'individual'}/>
             </React.Fragment>
           )}
         />
@@ -239,6 +268,7 @@ export default function App(props) {
                 <NavigationIndividual />
               </Mobile>{" "}
               <Pricing />{" "}
+              <Experience/>
             </React.Fragment>
           )}
         />
@@ -263,6 +293,18 @@ export default function App(props) {
                 <NavigationIndividual />
               </Mobile>
               <ContactForm />{" "}
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/privacy"
+          render={() => (
+            <React.Fragment>
+              <Mobile>
+                <NavigationIndividual />
+              </Mobile>
+              <Privacy />{" "}
             </React.Fragment>
           )}
         />

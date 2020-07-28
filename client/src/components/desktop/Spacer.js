@@ -9,7 +9,8 @@ const useStyles = makeStyles({
         height: '15vw'
     },
     desktop:{
-        height: '13vw'
+        height: '14.5vw'
+        // height: '13vw'
     }
 })
 

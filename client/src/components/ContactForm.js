@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ContactForm.css";
 import Button from "@material-ui/core/Button";
 import SendIcon from "@material-ui/icons/Send";
@@ -28,7 +28,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import ContactFormMobile from './ContactFormMobile'
+import ContactFormMobile from "./ContactFormMobile";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,9 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 const props = headers;
 
-
 function ContactFormDesktop() {
-
   const [state, setState] = useState({
     name: "",
     email: "",
@@ -112,22 +110,35 @@ function ContactFormDesktop() {
                 <CallIcon style={{ margin: 10, fontSize: "2em" }} />
                 +447900690989
               </li>
-              <li style={{ margin: 40 }}>
+              <li style={{ margin: 10 }}>
                 <EmailIcon style={{ margin: 10, fontSize: "2em" }} />
-                treasurebox.photo.uk@gmail.com
+                lahiru@treasureboxphotography.co.uk
               </li>
             </ul>
           </div>
-          <div className='ContactForm-icons' style={{   }}>
-            <div><FacebookIcon/></div>
-            <div><InstagramIcon/></div>
-            <div><LinkedInIcon/></div>
-            <div><TwitterIcon/></div>
+          <div className="ContactForm-icons" style={{}}>
+            <div>
+              <FacebookIcon />
+            </div>
+            <div>
+              <InstagramIcon />
+            </div>
+            {/* <div>
+              <LinkedInIcon />
+            </div>
+            <div>
+              <TwitterIcon />
+            </div> */}
+          </div>
+          <div className='ContactForm-privacy'>
+            <Link to='/privacy'>
+              Privacy Policy
+            </Link>
           </div>
         </div>
         <div className="ContactForm-form">
           <Container>
-            <Paper elevation={2 } style={{ textAlign: "center" }}>
+            <Paper elevation={2} style={{ textAlign: "center" }}>
               <form className={classes.root}>
                 <TextField
                   id="name"
@@ -189,15 +200,21 @@ function ContactFormDesktop() {
   );
 }
 
-export default function ContactForm(){
-  return(
+export default function ContactForm() {
+  const [location, setLocation] = useState(document.location.pathname);
+
+  useEffect(() => {
+    setLocation(document.location.pathname);
+    console.log(location);
+  });
+  return (
     <div>
       <Desktop>
-        <ContactFormDesktop/>
+        <ContactFormDesktop />
       </Desktop>
       <Mobile>
-        <ContactFormMobile/>
+        <ContactFormMobile />
       </Mobile>
     </div>
-  )
+  );
 }

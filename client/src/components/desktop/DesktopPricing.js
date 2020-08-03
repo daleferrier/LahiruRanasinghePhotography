@@ -61,7 +61,10 @@ function Prices() {
           ))}
         </Row>
         <p></p>
-        <div>All prices include a &pound;50 booking deposit.</div>
+        <div>
+          All prices include a <span style={{ fontFamily: "Arial" }}>£</span>50
+          booking deposit.
+        </div>
         <div>
           Additional images are available and further products can be created
           according to your requirements. Please contact me to discuss further

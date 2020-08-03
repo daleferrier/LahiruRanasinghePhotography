@@ -65,7 +65,7 @@ function Prices() {
         <div>
           Additional images are available and further products can be created
           according to your requirements. Please contact me to discuss further
-          if this is of interest.
+          if this is of interest. 
         </div>
       </Container>
     </div>

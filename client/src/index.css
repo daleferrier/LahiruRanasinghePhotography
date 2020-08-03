@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: 'LahiruFont';
+  font-family: 'LahiruFont', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

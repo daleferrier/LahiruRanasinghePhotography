@@ -30,11 +30,23 @@
     z-index: 5; */
 }
 
+@media only screen and (max-width: 1129px) {
+.DesktopNav-nav{
+    width:  90%;
+    }
+}
+
+@media only screen and (min-width: 1130px) {
+.DesktopNav-nav{
+    width:  75%;
+    }
+}
+
 .DesktopNav-nav{
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  width: 75%;
+  /* width: 75%; */
   margin: auto;
 }
 
@@ -46,7 +58,8 @@
   text-decoration: none !important;
   padding: 10px 1em;
   margin: 0 -1em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: LahiruFont;
+  /* font-family: 'Open Sans', sans-serif; */
   font-weight: 400;
 }
 

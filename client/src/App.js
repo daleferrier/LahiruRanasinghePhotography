@@ -27,6 +27,7 @@ import LandingAnimation from './components/LandingAnimation'
 import BottomNavigation from './components/BottomNavigation'
 import Experience from "./components/Experience";
 import Privacy from "./components/Privacy";
+import CopyrightBanner from "./components/CopyrightBanner";
 
 const useStyles = makeStyles({
   padding: {
@@ -318,6 +319,7 @@ export default function App(props) {
           <Route exact path="/review" /> */}
         {/* <Route exact path="/review" render={() => <TestimonialForm />} /> */}
       </Switch>
+      {/* <div className='App-CopyrightBanner'><CopyrightBanner/></div> */}
     </div>
   );
 }

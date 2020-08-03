@@ -1,13 +1,16 @@
 
 @font-face {
   font-family: 'LahiruFont';
-  src: url('OPTIMA.TTF') format('truetype');
+  src: url('optima.ttf') format('truetype');
+  /* src: url('OptimaMedium.ttf') format('truetype'); */
+  /* src: url('optima_b.ttf') format('truetype'); */
+  /* src: url('Optima_Italic.ttf') format('truetype'); */
 }
 
 
 body {
   margin: 0;
-  font-family: 'LahiruFont';
+  font-family: 'LahiruFont', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

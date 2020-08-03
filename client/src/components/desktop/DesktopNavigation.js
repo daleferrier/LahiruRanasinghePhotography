@@ -70,7 +70,7 @@ function DesktopNav() {
 
         <Typography>
           {/* <h5 className='DesktopNavigation-heading'>TreasureBox Photography</h5> */}
-          <h5 className={classes.heading}>TreasureBox Photography</h5>
+          <h5 className={classes.heading}>Treasurebox Photography</h5>
         </Typography>
       </Toolbar>
       <div className="DesktopNav-nav">
@@ -111,7 +111,7 @@ function DesktopNav() {
                 activeClassName="DesktopNav-active"
                 to="/pricing"
               >
-                Packages
+                Pricing
               </NavLink>
             </li>
             <li>

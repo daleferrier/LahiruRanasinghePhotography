@@ -1,0 +1,11 @@
+.CopyrightBanner{
+    font-size: 0.9em;
+    position: relative;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  transform: translate(0%, -0%);
+  /* margin: 0 auto; */
+    background: rgb(237,237,237);
+    background: radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 100%);
+}

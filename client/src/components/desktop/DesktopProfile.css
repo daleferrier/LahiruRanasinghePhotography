@@ -10,9 +10,9 @@
     margin: 20px;
 }
 
-p{
+/* p{
     margin-right: 20%;
-}
+} */
 
 .DesktopProfile-image{
     box-shadow: 2px 7px 13px -5px rgba(0,0,0,0.75);
@@ -59,8 +59,8 @@ p{
     align-items: center;
 }
 .ProfileTwoPics-Text p{
-    margin: 10% auto;
-    padding: 40px;
+    /* margin: 10% auto; */
+    /* padding: 40px; */
     text-align: justify;
 }
 
@@ -70,13 +70,13 @@ p{
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
-    align-items: center;
+    /* align-items: center; */
     column-gap: 10px;
 }
 
 .ProfileGrid > .ProfileGrid-image img{
     max-height: auto;
-    max-width: 400px;
+    max-width: 40vw;
     -webkit-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
@@ -88,7 +88,6 @@ p{
     /* margin: 5% 20% 5% 5%; */
     text-align: justify;
 }
-/* .ProfileGrid-text{
-    max-width: auto;
-    max-height: 50vh;
-} */
+.ProfileGrid-text{
+    margin-top: 20px;
+}

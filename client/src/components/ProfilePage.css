@@ -17,7 +17,7 @@ border-radius: 5px;
 margin: 20px auto auto auto;
 }
 
-.ProfilePage-image p{
-    text-align: left;
-    margin: 15px 5vw;
+.ProfilePage-image > div{
+    text-align: justify;
+    margin: 20px 5vw;
 }

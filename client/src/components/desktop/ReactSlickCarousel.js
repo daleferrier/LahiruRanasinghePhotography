@@ -4,24 +4,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './ReactSlickCarousel.css'
 import {carouselImages} from '../../data/Images'
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function ReactSlickCarousel(){
+
+  const matches = useMediaQuery('(min-width: 920px)')
+  const speed = useMediaQuery('(min-width: 920px)')
+  const SpeedValue = speed? 500:200
+
     const settings = {
       className: "center",
       centerMode: true,
       infinite: true,
-      centerPadding: "40px",
+      centerPadding: "60px",
       slidesToShow: 5,
       // lazyLoad: true,
       focusOnSelect: true,
-      speed: 100,
+      speed: SpeedValue,
+      // speed: 200,
       // speed: 2000,
       // autoplay: true,
-      autoplaySpeed: 0,
+      // autoplaySpeed: 0,
       // autoplaySpeed: 1000,
       cssEase: "cubic-bezier(0.5, 1, 0.89, 1)",
+      // cssEase: "linear",
+      
       pauseOnHover: true,
-      arrows: false,
+      arrows: matches,
+      // arrows: false,
       swipeToSlide: true,
 
       responsive: [

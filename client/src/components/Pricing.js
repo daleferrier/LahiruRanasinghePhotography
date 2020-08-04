@@ -56,76 +56,83 @@ const useStyles = makeStyles({
 function Price(){
   const classes = useStyles()
   return (
-    <Container fluid>
-      <Tabs
-        defaultActiveKey={pricing[1].eventkey}
-        id="uncontrolled-tab-example"
-        className="justify-content-between"
-      >
-        {pricing.map((m) => (
-          <Tab eventKey={m.eventkey} title={m.eventkey} className="Pricing-tab">
-            <Card className={classes.cardBorder} elevation={0}>
-              <CardHeader title={m.price} />
+    <div className="Pricing-tabs">
+      <Container fluid>
+        <Tabs
+          defaultActiveKey={pricing[1].eventkey}
+          id="uncontrolled-tab-example"
+          className="justify-content-between"
+        >
+          {pricing.map((m) => (
+            <Tab
+              eventKey={m.eventkey}
+              title={m.eventkey}
+              className="Pricing-tab"
+            >
+              <Card className={classes.cardBorder} elevation={0}>
+                <CardHeader title={m.price} />
+                <CardContent>
+                  <Typography>
+                    <ul>
+                      {[...m.description].map((x) => (
+                        <li style={{ textAlign: "left" }}>{x}</li>
+                      ))}
+                    </ul>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Tab>
+          ))}
+
+          {/* <Tab eventKey="profile" title="Couple" className="Pricing-tab">
+            <Card elevation={0} className={classes.cardBorder}>
+              <CardHeader title="dale" />
               <CardContent>
                 <Typography>
-                  <ul>
-                    {[...m.description].map((x) => (
-                      <li style={{ textAlign: "left" }}>{x}</li>
-                    ))}
-                  </ul>
+                  It has roots in a piece of classical Latin literature from 45
+                  BC, making it over 2000 years old. Richard McClintock, a Latin
+                  professor at Hampden-Sydney College in Virginia, looked up one
+                  of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                  passage, and going through the cites of the word in classical
+                  literature, discovered the undoubtable source. Lorem Ipsum comes
+                  from sections 1.10.32 and 1.10.33 of "d
                 </Typography>
               </CardContent>
             </Card>
           </Tab>
-        ))}
-
-        {/* <Tab eventKey="profile" title="Couple" className="Pricing-tab">
-          <Card elevation={0} className={classes.cardBorder}>
-            <CardHeader title="dale" />
-            <CardContent>
-              <Typography>
-                It has roots in a piece of classical Latin literature from 45
-                BC, making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one
-                of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes
-                from sections 1.10.32 and 1.10.33 of "d
-              </Typography>
-            </CardContent>
-          </Card>
-        </Tab>
-        <Tab eventKey="contact" title="Individual" className="Pricing-tab">
-          <Card elevation={0} className={classes.cardBorder}>
-            <CardHeader title="dale" />
-            <CardContent>
-              <Typography>
-                It has roots in a piece of classical Latin literature from 45
-                BC, making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one
-                of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes
-                from sections 1.10.32 and 1.10.33 of "d
-              </Typography>
-            </CardContent>
-          </Card>
-        </Tab> */}
-      </Tabs>
-      <div style={{margin: '10px auto'}}>
-        <ul style={{padding: 20}}>
-          <li>
-            All prices include a £50 booking deposit. 
-          </li>
-          <li>
-            Additional images are
-            available and further products can be created according to your
-            requirements. Please contact me to discuss further if this is of
-            interest.
-          </li>
-        </ul>
-      </div>
-    </Container>
+          <Tab eventKey="contact" title="Individual" className="Pricing-tab">
+            <Card elevation={0} className={classes.cardBorder}>
+              <CardHeader title="dale" />
+              <CardContent>
+                <Typography>
+                  It has roots in a piece of classical Latin literature from 45
+                  BC, making it over 2000 years old. Richard McClintock, a Latin
+                  professor at Hampden-Sydney College in Virginia, looked up one
+                  of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                  passage, and going through the cites of the word in classical
+                  literature, discovered the undoubtable source. Lorem Ipsum comes
+                  from sections 1.10.32 and 1.10.33 of "d
+                </Typography>
+              </CardContent>
+            </Card>
+          </Tab> */}
+        </Tabs>
+        <div style={{ margin: "10px auto" }}>
+          <ul style={{ padding: 20 }}>
+            <li>
+              All prices include a{" "}
+              <span style={{ fontFamily: "Arial" }}>£</span>
+              50 booking deposit.
+            </li>
+            <li>
+              Additional images are available and further products can be
+              created according to your requirements. Please contact me to
+              discuss further if this is of interest.
+            </li>
+          </ul>
+        </div>
+      </Container>
+    </div>
   );
 } 
 

@@ -4,8 +4,8 @@
     justify-content: space-evenly;
 } */
 
-.Pricing-tab{
-
+.Pricing-tabs a{
+    color: black !important;
 }
 
 /* .nav-tabs {

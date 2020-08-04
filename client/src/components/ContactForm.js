@@ -118,10 +118,20 @@ function ContactFormDesktop() {
           </div>
           <div className="ContactForm-icons" style={{}}>
             <div>
-              <FacebookIcon />
+              <a
+                style={{ color: "black" }}
+                href="https://www.facebook.com/treasurebox.photo"
+              >
+                <FacebookIcon />
+              </a>
             </div>
             <div>
-              <InstagramIcon />
+              <a
+                style={{ color: "black" }}
+                href="https://www.instagram.com/treasurebox.photo/"
+              >
+                <InstagramIcon />
+              </a>
             </div>
             {/* <div>
               <LinkedInIcon />
@@ -130,10 +140,8 @@ function ContactFormDesktop() {
               <TwitterIcon />
             </div> */}
           </div>
-          <div className='ContactForm-privacy'>
-            <Link to='/privacy'>
-              Privacy Policy
-            </Link>
+          <div className="ContactForm-privacy">
+            <Link to="/privacy">Privacy Policy</Link>
           </div>
         </div>
         <div className="ContactForm-form">

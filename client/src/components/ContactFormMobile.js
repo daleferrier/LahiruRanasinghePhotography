@@ -184,12 +184,17 @@ function ContactDetails() {
           <ul style={{ listStyleType: "none", margin: 0, padding: 0 }}>
             <li style={{ margin: 40 }}>
               <CallIcon style={{ margin: 10, fontSize: "2em" }} />
-              <a href="tel:+447900690989">+447900690989</a>
+              <a style={{ color: "black" }} href="tel:+447900690989">
+                +447900690989
+              </a>
               {/* +447900690989 */}
             </li>
-            <li style={{ margin: '40px 10px' }}>
+            <li style={{ margin: "40px 10px" }}>
               <EmailIcon style={{ margin: 10, fontSize: "2em" }} />
-              <a href="mailto:treasurebox.photo.uk@gmail.com?subject=Photoshoot Enquiry&body=Hi%20Lahiru%20">
+              <a
+                style={{ color: "black" }}
+                href="mailto:treasurebox.photo.uk@gmail.com?subject=Photoshoot Enquiry&body=Hi%20Lahiru%20"
+              >
                 lahiru@treasureboxphotography.co.uk
               </a>
             </li>
@@ -215,11 +220,15 @@ function ContactDetails() {
           </ul>
         </div>
         <div className="ContactFormMobile-icons" style={{}}>
-          <div style={{ margin: 5 }}>
-            <FacebookIcon />
+          <div style={{ margin: 10 }}>
+            <a style={{color: 'black'}} href="https://www.facebook.com/treasurebox.photo">
+              <FacebookIcon />
+            </a>
           </div>
-          <div style={{ margin: 5 }}>
-            <InstagramIcon />
+          <div style={{ margin: 10 }}>
+            <a style={{color: 'black'}} href="https://www.instagram.com/treasurebox.photo/">
+              <InstagramIcon />
+            </a>
           </div>
           {/* <div>
             <LinkedInIcon />
@@ -228,10 +237,8 @@ function ContactDetails() {
             <TwitterIcon />
           </div> */}
         </div>
-        <div className='ContactFormMobile-privacy'>
-          <Link to='/privacy'>
-            Privacy Policy
-          </Link>
+        <div className="ContactFormMobile-privacy">
+          <Link to="/privacy">Privacy Policy</Link>
         </div>
       </Paper>
     </div>

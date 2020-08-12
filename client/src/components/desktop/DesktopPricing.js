@@ -70,6 +70,7 @@ function Prices() {
           according to your requirements. Please contact me to discuss further
           if this is of interest.
         </div>
+        <p style={{height: 20}}></p>
       </Container>
     </div>
   );

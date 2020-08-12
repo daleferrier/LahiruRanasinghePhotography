@@ -28,6 +28,7 @@ import BottomNavigation from './components/BottomNavigation'
 import Experience from "./components/Experience";
 import Privacy from "./components/Privacy";
 import CopyrightBanner from "./components/CopyrightBanner";
+import CookieAlert from './components/CookieAlert'
 
 const useStyles = makeStyles({
   padding: {
@@ -48,6 +49,9 @@ function Logo() {
     </Mobile>
   );
 }
+
+
+
 
 function HomePageComponents() {
   return (
@@ -172,6 +176,10 @@ export default function App(props) {
       console.log(location);
     });
 
+    // useEffect(() => {
+    //   return  (<div><CookieAlert /></div>);
+    // });
+
   const scrollListener = () => {
     if (navRef.current.offsetTop != 0) {
       setPosition(navRef.current.offsetTop);
@@ -211,6 +219,7 @@ export default function App(props) {
         {/* <Mobile><BottomNavigation/></Mobile> */}
       </div>
       <FloatingButton />
+      <CookieAlert/>
       {/* <div ref={landingRef} className="landingPage">
             <LandingPage />
           </div>
@@ -319,7 +328,9 @@ export default function App(props) {
           <Route exact path="/review" /> */}
         {/* <Route exact path="/review" render={() => <TestimonialForm />} /> */}
       </Switch>
-      {/* <div className='App-CopyrightBanner'><CopyrightBanner/></div> */}
+      <div className='App-CopyrightBanner'>
+        <CopyrightBanner/>
+      </div>
     </div>
   );
 }

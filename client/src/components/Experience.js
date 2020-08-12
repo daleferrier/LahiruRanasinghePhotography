@@ -15,7 +15,7 @@ export default function Experience(){
               We start with a phone call a few days before the shoot so that I
               can get a better understanding of what you want and to get to know
               your family a bit more so that I can tailor my approach. I will
-              also explain what to expect from the day and give you tips on how
+              also explain what to expect on the day and give you tips on how
               best to coordinate colours and outfits. I kindly ask that the
               booking deposit is made at this point.
             </p>

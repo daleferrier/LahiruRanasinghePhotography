@@ -30,6 +30,8 @@ html, body {
     /* scroll-snap-type: y mandatory; */
     /* height: 100vh; */
   /* overflow: hidden; */
+  -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 
 html ::-webkit-scrollbar{

@@ -14,14 +14,9 @@ app.get('/*', (req, res) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 
-
-
-
-
-
 app.post('/contact', (req, res)=>{
-
-
+    // console.log(`server response: ${req.body.details}`)
+    // nodemailer.createTestAccount((err, account)=>{
         const htmlEmail = `
             <h2>Hi Lahiru, you have a new enquiry: </h2> 
             <h3>From: ${req.body.details.name}</h4>
@@ -31,7 +26,7 @@ app.post('/contact', (req, res)=>{
         const transporter1 = nodemailer.createTransport({
           service: "Mailjet",
           // host: "in-v3.mailjet.com",
-          // host: "smtp.sendgrid.net",
+          // host: "smtp.sendgrid.net", 
           // port: 465,
           auth: {
             user: "26b65e02a0ac6faf9b6495f813ef4af4",
@@ -58,7 +53,6 @@ app.post('/contact', (req, res)=>{
           host: "smtp.elasticemail.com",
           // host: "smtp.sendgrid.net",
           port: 2525,
-          // port: 2525,
           auth: {
             user: "daleferrier@gmail.com",
             // user: "apikey",
@@ -66,7 +60,6 @@ app.post('/contact', (req, res)=>{
             // "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",
           },
         });
-
 
 
         let mailOptions = {
@@ -77,75 +70,54 @@ app.post('/contact', (req, res)=>{
           text: req.body.details.enquiry, // plain text body
           html: htmlEmail, // html body
         };
-        // STORE ALL RESPONSES IN ARRAY FIRST
+ 
+        // transporter1.sendMail(mailOptions, (err, info)=>{
+        //     if (err) {
+        //       res.json({
+        //         message1: "fail",
+        //         // message: "fail",
+        //       });
+        //         return console.log(err)
+        //     } 
+        //     res.json({
+        //       message1: "success",
+        //     });
+        //     console.log("Message sent: %s", info.messageId);
+        //     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        // })
 
-        // var failMessages = 5;
-        // var successMessages = 5;
-        let failMessages = 0;
-        let successMessages = 0;
+        // transporter2.sendMail(mailOptions, (err, info)=>{
+        //     if (err) {
+        //       res.json({
+        //         message2: "fail",
+        //         // message: "fail",
+        //       });
+        //         return console.log(err)
+        //     } 
+        //     res.json({
+        //       message2: "success",
+        //     });
+        //     console.log("Message sent: %s", info.messageId);
+        //     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        // })
 
-        const emailCallback = (err, info) => {
-          if (err) {
-            failMessages++
-            res.json({
-              message: "fail",
-              successes: successMessages,
-              fails: failMessages,
-            });
-            return console.log(err);
-          }
-          successMessages++;
-          console.log(`successes are ${successMessages}`)
-          res.json({
-            message: "success",
-            successes: successMessages,
-            fails: failMessages,
-          });
-          console.log("Message sent: %s", info.messageId);
-          // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        };
-
-
-        transporter1.sendMail(mailOptions, (err, info)=>{
-          if(err){
-            failMessages++
-             (console.log(err));
-          }
-          console.log('transporter1 executed')
-          console.log(info.messageId)
-          successMessages++
-          transporter2.sendMail(mailOptions, (err, info) => {
+        transporter3.sendMail(mailOptions, (err, info)=>{
             if (err) {
-              failMessages++;
-               console.log(err);
-            }
-            console.log("transporter2 executed");
-            console.log(info.messageId);
-            successMessages++;
-                    transporter3.sendMail(mailOptions, (err, info) => {
-                      if (err) {
-                        failMessages++;
-                         console.log(err);
-                      }
-                      successMessages++;
-                      console.log("transporter3 executed");
-                      console.log(info.messageId);
-                      console.log(`successes are ${successMessages}`);
-                      res.json({
-                        successes: successMessages,
-                        fails: failMessages,
-                        completed: false,
-                        buttonDisabled: false
-                      })
-                      return;
-                    });
-          });
-        });
-        
-
-        // transporter3.sendMail(mailOptions, emailCallback);
+              res.json({
+                message3: "fail",
+                // message: "fail",
+              });
+                return console.log(err)
+            } 
+            res.json({
+              message3: "success",
+            });
+            console.log("Message sent: %s", info.messageId);
+            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        })
+    // })
+    
 })
-
 
 const port = process.env.PORT || 5000;
 app.listen(port);

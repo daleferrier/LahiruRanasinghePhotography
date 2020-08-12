@@ -39,6 +39,7 @@ export default function Gallery(){
           ))}
         </CardColumns>
       {/* </Container> */}
+      <p style={{height: 40}}></p>
     </div>
   );
 }

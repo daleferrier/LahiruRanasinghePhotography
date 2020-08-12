@@ -45,16 +45,16 @@ function ProfileTwoPics(){
           </p>
           <p>
             As cheesy as this is, to me, my camera is my treasure box. I use it
-            to capture and store the things that are most precious memories. I
-            would love to meet you and your loved ones and create treasures for
-            you too!
+            to capture and store the things that are most precious...memories.
+            I would love to meet you and your loved ones and create treasures
+            for you too!
           </p>
           <p>
             I have a very relaxed and informal style. My shoots are done in your
             homes, gardens or in outdoor spaces like parks or woods and I do my
-            best to make it an enjoyable experience for the whole family.
-            Especially for the kids, I have dinosaur knowledge equivalent to a
-            four year old and I am an expert at animal sounds!
+            best to make it an enjoyable experience for the whole family. To
+            keep your kids engaged, I have dinosaur knowledge equivalent to a
+            four year old and am an expert at animal sounds!
           </p>
           <p>
             I am based in Ruislip, West London and happily travel to Harrow,
@@ -95,16 +95,16 @@ function ProfileGrid(){
           </p>
           <p>
             As cheesy as this is, to me, my camera is my treasure box. I use it
-            to capture and store the things that are most precious memories. I
+            to capture and store the things that are most precious...memories. I
             would love to meet you and your loved ones and create treasures for
             you too!
           </p>
           <p>
             I have a very relaxed and informal style. My shoots are done in your
             homes, gardens or in outdoor spaces like parks or woods and I do my
-            best to make it an enjoyable experience for the whole family.
-            Especially for the kids, I have dinosaur knowledge equivalent to a
-            four year old and I am an expert at animal sounds!
+            best to make it an enjoyable experience for the whole family. To
+            keep your kids engaged, I have dinosaur knowledge equivalent to a
+            four year old and am an expert at animal sounds!
           </p>
           <p>
             I am based in Ruislip, West London and happily travel to Harrow,

@@ -51,6 +51,7 @@
 }
 
 .DesktopNav-link{
+  display: inline-block;
   color: rgb(165, 165, 165);
   font-weight: 400;
   font-size: 18px;

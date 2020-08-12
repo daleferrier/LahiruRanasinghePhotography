@@ -29,6 +29,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import ContactFormMobile from "./ContactFormMobile";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,6 +56,10 @@ function ContactFormDesktop() {
 
   const [open, setOpen] = useState(false);
 
+  const [visibility, setVisibility] = useState(false);
+
+  const [isDisabled, setDisable] = useState(false);
+
   const handleClick = () => {
     setOpen(true);
   };
@@ -71,31 +76,71 @@ function ContactFormDesktop() {
     }));
   };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    axios
-      .post("/contact", {
-        details: state,
-      })
-      .then(function (response) {
-        if (response.data.message == "success") {
-          setStatus("SENT");
-          handleClick();
-          setState({
-            name: "",
-            email: "",
-            groupSize: "",
-            enquiry: "",
-          });
-        } else if (response.data.message == "fail") {
-          setStatus("FAILED");
-          handleClick();
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+const handleSubmit = (evt) => {
+  setVisibility(true);
+  setDisable(true);
+  evt.preventDefault();
+  axios
+    .post("/contact", {
+      details: state,
+    })
+    .then(function (response) {
+      setVisibility(response.data.completed);
+      setDisable(response.data.buttonDisabled);
+      if (
+        response.data.successes >= 1 &&
+        response.data.fails < 3
+        // response.data.message == "success"
+      ) {
+        console.log(response.data);
+        setStatus("SENT");
+        handleClick();
+        setState({
+          name: "",
+          email: "",
+          groupSize: "",
+          enquiry: "",
+        });
+      } else if (
+        response.data.fails == 3
+      ) {
+        console.log(response.data);
+        setStatus("FAILED");
+        handleClick();
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
+
+
+
+  // const handleSubmit = (evt) => {
+  //   evt.preventDefault();
+  //   axios
+  //     .post("/contact", {
+  //       details: state,
+  //     })
+  //     .then(function (response) {
+  //       if (response.data.message == "success") {
+  //         setStatus("SENT");
+  //         handleClick();
+  //         setState({
+  //           name: "",
+  //           email: "",
+  //           groupSize: "",
+  //           enquiry: "",
+  //         });
+  //       } else if (response.data.message == "fail") {
+  //         setStatus("FAILED");
+  //         handleClick();
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // };
 
   const classes = useStyles();
 
@@ -119,6 +164,8 @@ function ContactFormDesktop() {
           <div className="ContactForm-icons" style={{}}>
             <div>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "black" }}
                 href="https://www.facebook.com/treasurebox.photo"
               >
@@ -127,6 +174,8 @@ function ContactFormDesktop() {
             </div>
             <div>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "black" }}
                 href="https://www.instagram.com/treasurebox.photo/"
               >
@@ -147,6 +196,12 @@ function ContactFormDesktop() {
         <div className="ContactForm-form">
           <Container>
             <Paper elevation={2} style={{ textAlign: "center" }}>
+              <div className="spinner">
+                {/* <CircularProgress style={{ visibility: "visible" }} /> */}
+                <CircularProgress
+                  style={{ visibility: `${visibility ? "visible" : "hidden"}` }}
+                />
+              </div>
               <form className={classes.root}>
                 <TextField
                   id="name"
@@ -179,10 +234,11 @@ function ContactFormDesktop() {
                   startIcon={<SendIcon />}
                   elevation={3}
                   onClick={handleSubmit}
+                  disabled={isDisabled}
                 >
                   Send Message
                 </Button>
-                <Snackbar
+                {/* <Snackbar
                   className={classes.snackBar}
                   anchorOrigin={{
                     vertical: "bottom",
@@ -198,8 +254,27 @@ function ContactFormDesktop() {
                     }}
                     message={status}
                   />
-                </Snackbar>
+                </Snackbar> */}
               </form>
+              <Snackbar
+                style={{ height: "100vh", width: "50%", margin: "auto" }}
+                // className={classes.snackBar}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "center",
+                }}
+                open={open}
+                autoHideDuration={2000}
+                onClose={handleClose}
+                onClick={handleClose}
+              >
+                <SnackbarContent
+                  style={{
+                    backgroundColor: `${status == "SENT" ? "green" : "red"}`,
+                  }}
+                  message={status}
+                />
+              </Snackbar>
             </Paper>
           </Container>
         </div>

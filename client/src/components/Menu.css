@@ -1,3 +1,6 @@
 .Menu-button :focus{
-    outline: none;
+    outline: none !important;
+}
+.Menu-button{
+    color: rgb(89,89,89) !important;
 }

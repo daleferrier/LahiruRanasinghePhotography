@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   title:{
     fontSize: '4.5vw',
     fontFamily: 'LahiruFont',
-    color: 'black'
+    color: 'rgb(89,89,89)'
     // margin: '10px',
     // border: '2px solid red'
   }, 

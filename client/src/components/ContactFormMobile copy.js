@@ -30,10 +30,8 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import CloseIcon from "@material-ui/icons/Close";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Route, Switch, Link, NavLink } from "react-router-dom";
-import CircularProgress from "@material-ui/core/CircularProgress";
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,10 +58,6 @@ function ContactUserForm() {
 
   const [open, setOpen] = useState(false);
 
-  const [visibility, setVisibility] = useState(false)
-
-  const [isDisabled, setDisable] = useState(false)
-
   const handleClick = () => {
     setOpen(true);
   };
@@ -71,8 +65,6 @@ function ContactUserForm() {
   const handleClose = () => {
     setOpen(false);
   };
-
-  
 
   const handleChange = (evt) => {
     const { name, value } = evt.target;
@@ -83,52 +75,37 @@ function ContactUserForm() {
   };
 
   const handleSubmit = (evt) => {
-    
-    setVisibility(true)
-    setDisable(true)
     evt.preventDefault();
     axios
       .post("/contact", {
         details: state,
       })
       .then(function (response) {
-        setVisibility(response.data.completed);
-        setDisable(response.data.buttonDisabled);
         if (
           // response.data.message1 == "success" ||
           // response.data.message2 == "success" ||
-
-          response.data.successes >= 1 && response.data.fails < 3
-          // response.data.message == "success"
+          response.data.message3 == "success"
         ) {
-          console.log(response.data);
-          // console.log(response.data.message2);
-          // console.log(response.data.message3);
           setStatus("SENT");
           handleClick();
           setState({
             name: "",
             email: "",
-            groupSize: "", 
+            groupSize: "",
             enquiry: "",
           });
         } else if (
           // response.data.message1 == "fail" &&
           // response.data.message2 == "fail" &&
-          response.data.fails == 3
-          ) 
-          {
-            // console.log(response.data.message1);
-            // console.log(response.data.message2);
-            console.log(response.data);
-        // } else if (response.data.message == "fail") {
+          response.data.message3 == "fail"
+        ) {
           setStatus("FAILED");
           handleClick();
         }
       })
       .catch(function (error) {
         console.log(error);
-      }); 
+      });
   };
 
   const classes = useStyles();
@@ -137,12 +114,6 @@ function ContactUserForm() {
     <div className="ContactFormMobile-Form">
       {/* <PageHeader header={props.ContactForm} /> */}
       <Container>
-        <div className="spinner">
-          {/* <CircularProgress style={{ visibility: "visible" }} /> */}
-          <CircularProgress
-            style={{ visibility: `${visibility ? "visible" : "hidden"}` }}
-          />
-        </div>
         <Paper elevation={3} style={{ textAlign: "center" }}>
           <Button
             className="ContactFormMobile-close"
@@ -182,30 +153,27 @@ function ContactUserForm() {
               startIcon={<SendIcon />}
               elevation={3}
               onClick={handleSubmit}
-              disabled={isDisabled}
             >
               Send Message
             </Button>
-          </form>
-          <Snackbar
-            style={{ height: "50vh", width: "50%", margin: "auto" }}
-            // className={classes.snackBar}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "center",
-            }}
-            open={open}
-            autoHideDuration={2000}
-            onClose={handleClose}
-            onClick={handleClose}
-          >
-            <SnackbarContent
-              style={{
-                backgroundColor: `${status == "SENT" ? "green" : "red"}`,
+            <Snackbar
+              className={classes.snackBar}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
               }}
-              message={status}
-            />
-          </Snackbar>
+              open={open}
+              autoHideDuration={6000}
+              onClose={handleClose}
+            >
+              <SnackbarContent
+                style={{
+                  backgroundColor: `${status == "SENT" ? "green" : "red"}`,
+                }}
+                message={status}
+              />
+            </Snackbar>
+          </form>
         </Paper>
       </Container>
     </div>
@@ -262,8 +230,6 @@ function ContactDetails() {
         <div className="ContactFormMobile-icons" style={{}}>
           <div style={{ margin: 10 }}>
             <a
-              target="_blank"
-              rel="noopener noreferrer"
               style={{ color: "black" }}
               href="https://www.facebook.com/treasurebox.photo"
             >
@@ -272,8 +238,6 @@ function ContactDetails() {
           </div>
           <div style={{ margin: 10 }}>
             <a
-              target="_blank"
-              rel="noopener noreferrer"
               style={{ color: "black" }}
               href="https://www.instagram.com/treasurebox.photo/"
             >

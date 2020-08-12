@@ -23,7 +23,8 @@ const useStyles = makeStyles({
   title: {
     fontSize: "6vw",
     fontFamily: "LahiruFont",
-    paddingTop: '3vh'
+    paddingTop: '3vh',
+    color: 'rgb(89, 89, 89)'
     // wordSpacing: 10
   },
   container: {
@@ -47,7 +48,8 @@ const useStyles = makeStyles({
   dots: {
     marginLeft: '85vw',
     // float: 'right',
-    paddingTop: '2vh'
+    paddingTop: '2vh',
+    color: 'rgb(89, 89, 89)'
 
   }
 });

@@ -39,13 +39,14 @@ const useStyles = makeStyles({
     fontFamily: "LahiruFont",
     margin: 0,
     padding: 0,
+    color: 'rgb(89,89,89)'
   },
 });
 
 function Logo() {
   return (
     <img
-      style={{ height: "6vw", margin: 0, padding: "0px 20px 0px 0px" }}
+      style={{ height: "6vw", margin: 0, padding: "0px 20px 0px 0px"}}
       src={LogoSVG}
     />
   );

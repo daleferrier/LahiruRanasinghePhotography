@@ -68,7 +68,7 @@ function ProfileText(){
           homes, gardens or in outdoor spaces like parks or woods and I do my best
           to make it an enjoyable experience for the whole family. Especially for
           the kids, I have dinosaur knowledge equivalent to a four year old and I
-          am an expert at animal sounds!   I am based in Ruislip, West London and
+          am an expert at animal sounds!   I am based in Ruislip, West London and will
           happily travel to Harrow, Hillingdon, Buckinghamshire, Hertfordshire and
           West London. If you would like me to create some beautiful images for
           you and your loved ones, please do get in in touch.   I hope you’ll
@@ -117,7 +117,7 @@ function ProfileImage(){
             four year old and am an expert at animal sounds!
           </p>
           <p>
-            I am based in Ruislip, West London and happily travel to Harrow,
+            I am based in Ruislip, West London and will happily travel to Harrow,
             Hillingdon, Buckinghamshire, Hertfordshire and West London. If you
             would like me to create some beautiful images for you and your loved
             ones, please do get in in touch.

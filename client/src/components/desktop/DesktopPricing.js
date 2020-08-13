@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import pricing from "../../data/pricing";
+import {pricing} from "../../data/pricing";
 import { makeStyles } from "@material-ui/core/styles";
 import { headers } from "../../data/headers";
 import PageHeader from "../PageHeader";

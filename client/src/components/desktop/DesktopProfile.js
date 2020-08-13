@@ -57,7 +57,7 @@ function ProfileTwoPics(){
             four year old and am an expert at animal sounds!
           </p>
           <p>
-            I am based in Ruislip, West London and happily travel to Harrow,
+            I am based in Ruislip, West London and will happily travel to Harrow,
             Hillingdon, Buckinghamshire, Hertfordshire and West London. If you
             would like me to create some beautiful images for you and your loved
             ones, please do get in in touch.
@@ -107,7 +107,7 @@ function ProfileGrid(){
             four year old and am an expert at animal sounds!
           </p>
           <p>
-            I am based in Ruislip, West London and happily travel to Harrow,
+            I am based in Ruislip, West London and will happily travel to Harrow,
             Hillingdon, Buckinghamshire, Hertfordshire and West London. If you
             would like me to create some beautiful images for you and your loved
             ones, please do get in in touch.

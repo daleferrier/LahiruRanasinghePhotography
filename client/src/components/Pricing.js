@@ -24,7 +24,7 @@ import NavigationIndividual from './NavigationIndividual'
 import {Mobile} from '../functions/helperFunctions'
 import {Desktop} from '../functions/helperFunctions'
 import Paper from '@material-ui/core/Paper'
-import pricing from '../data/pricing'
+import {mobilePricing} from '../data/pricing'
 import Experience from './Experience'
 
 const useStyles = makeStyles({
@@ -59,11 +59,11 @@ function Price(){
     <div className="Pricing-tabs">
       <Container fluid>
         <Tabs
-          defaultActiveKey={pricing[1].eventkey}
+          defaultActiveKey={mobilePricing[1].eventkey}
           id="uncontrolled-tab-example"
           className="justify-content-between"
         >
-          {pricing.map((m) => (
+          {mobilePricing.map((m) => (
             <Tab
               eventKey={m.eventkey}
               title={m.eventkey}

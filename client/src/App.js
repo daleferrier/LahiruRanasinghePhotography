@@ -176,6 +176,8 @@ export default function App(props) {
       console.log(location);
     });
 
+    
+
     // useEffect(() => {
     //   return  (<div><CookieAlert /></div>);
     // });

@@ -1,7 +1,7 @@
 {
   "name": "lahiru",
   "version": "1.0.0",
-    "engines": {
+  "engines": {
     "node": "10.x"
   },
   "description": "",
@@ -17,6 +17,7 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4"
   }

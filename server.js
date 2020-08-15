@@ -1,9 +1,12 @@
+
+var enforce = require("express-sslify");
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const app=express();
 var path = require("path");
 
+app.use(enforce.HTTPS());
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -147,13 +150,13 @@ app.post('/contact', (req, res)=>{
         // transporter3.sendMail(mailOptions, emailCallback);
 })
 
-if (process.env.NODE_ENV === "production") {
-  app.use((req, res, next) => {
-    if (req.header("x-forwarded-proto") !== "https")
-      res.redirect(`https://${req.header("host")}${req.url}`);
-    else next();
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use((req, res, next) => {
+//     if (req.header("x-forwarded-proto") !== "https")
+//       res.redirect(`https://${req.header("host")}${req.url}`);
+//     else next();
+//   });
+// }
 
 const port = process.env.PORT || 5000;
 app.listen(port);

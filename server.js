@@ -73,7 +73,8 @@ app.post('/contact', (req, res)=>{
 
 
         let mailOptions = {
-          from: "daleferrier@hotmail.com",
+          from: "lahiru@treasureboxphotography.co.uk",
+          // from: "daleferrier@hotmail.com",
           // to: "daleferrier@gmail.com",
           to: "daleferrier@gmail.com, lahiru@treasureboxphotography.co.uk",
           // to: "treasurebox.photo.uk@gmail.com",

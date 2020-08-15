@@ -36,6 +36,14 @@ const pricing = [
 
 const mobilePricing = [
   {
+    // photo_url: "family.jpg",
+    eventkey: "Classic",
+    title: "Classic £249",
+    package: "Classic £249",
+    description: ["10 digital images"],
+    price: "£249",
+  },
+  {
     // photo_url: "couple.jpg",
     eventkey: "Treasurebox",
     title: "Treasurebox £349",
@@ -46,14 +54,7 @@ const mobilePricing = [
     ],
     price: "£349",
   },
-  {
-    // photo_url: "family.jpg",
-    eventkey: "Classic",
-    title: "Classic £249",
-    package: "Classic £249",
-    description: ["10 digital images"],
-    price: "£249",
-  },
+
   {
     // photo_url: "portrait.jpeg",
     eventkey: "Full Monty",

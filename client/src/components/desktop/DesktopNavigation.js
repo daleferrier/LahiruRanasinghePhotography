@@ -60,7 +60,7 @@ function DesktopNav() {
     <div className="DesktopNav">
       <Toolbar className={classes.toolbar}>
         <Link
-          smooth={true}
+          // smooth={true}
           to="/"
           // to="/landing/#landing"
           // id="Nav-logo"
@@ -71,7 +71,7 @@ function DesktopNav() {
 
         <Typography>
           {/* <h5 className='DesktopNavigation-heading'>TreasureBox Photography</h5> */}
-          <h5 className={classes.heading}>Treasurebox Photography</h5>
+          <div><h5 className={classes.heading}>Treasurebox Photography</h5></div>
         </Typography>
       </Toolbar>
       <div className="DesktopNav-nav">
@@ -154,7 +154,7 @@ function CenteredTabs() {
         <Paper className={classes.root}>
           <Toolbar className={classes.toolbar}>
             <Link
-              smooth={true}
+              // smooth={true}
               to="/"
               // to="/landing/#landing"
               // id="Nav-logo"
@@ -179,14 +179,14 @@ function CenteredTabs() {
               className={classes.tab}
               label="Home"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/"
             />
             <Tab
               className={classes.tab}
               label="Gallery"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/gallery"
               // to="/gallery/#gallery"
             />
@@ -194,7 +194,7 @@ function CenteredTabs() {
               className={classes.tab}
               label="About Me"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/profile"
               // to="/profile/#profile"
             />
@@ -202,7 +202,7 @@ function CenteredTabs() {
               className={classes.tab}
               label="Packages"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/pricing"
               // to="/pricing/#pricing"
             />
@@ -210,7 +210,7 @@ function CenteredTabs() {
               className={classes.tab}
               label="Testimonials"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/testimonials"
               // to="/testimonials/#testimonials"
             />
@@ -218,7 +218,7 @@ function CenteredTabs() {
               className={classes.tab}
               label="Get in touch"
               component={Link}
-              smooth={false}
+              // smooth={false}
               to="/contact"
               // to="/contact/#contact"
             />

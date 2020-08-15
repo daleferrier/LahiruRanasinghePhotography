@@ -176,7 +176,11 @@ export default function App(props) {
       console.log(location);
     });
 
-    
+    // useEffect(() => {
+    //   window.focus();
+    //   window.scrollTo(0, 0);
+    // });
+
 
     // useEffect(() => {
     //   return  (<div><CookieAlert /></div>);

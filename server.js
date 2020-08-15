@@ -71,7 +71,7 @@ app.post('/contact', (req, res)=>{
 
         let mailOptions = {
           from: "daleferrier@hotmail.com",
-          to: "daleferrier@gmail.com",
+          to: "daleferrier@gmail.com, lahiru@treasureboxphotography.co.uk",
           // to: "treasurebox.photo.uk@gmail.com",
           subject: "Treasurebox Photography Enquiry", // Subject line
           text: req.body.details.enquiry, // plain text body

@@ -71,6 +71,7 @@ app.post('/contact', (req, res)=>{
 
         let mailOptions = {
           from: "daleferrier@hotmail.com",
+          // to: "daleferrier@gmail.com",
           to: "daleferrier@gmail.com, lahiru@treasureboxphotography.co.uk",
           // to: "treasurebox.photo.uk@gmail.com",
           subject: "Treasurebox Photography Enquiry", // Subject line
@@ -146,6 +147,13 @@ app.post('/contact', (req, res)=>{
         // transporter3.sendMail(mailOptions, emailCallback);
 })
 
+if (process.env.NODE_ENV === "production") {
+  app.use((req, res, next) => {
+    if (req.header("x-forwarded-proto") !== "https")
+      res.redirect(`https://${req.header("host")}${req.url}`);
+    else next();
+  });
+}
 
 const port = process.env.PORT || 5000;
 app.listen(port);

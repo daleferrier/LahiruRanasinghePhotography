@@ -6,6 +6,7 @@ const nodemailer = require('nodemailer');
 const app=express();
 var path = require("path");
 
+// DISABLE FOR LOCAL TESTING
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -75,7 +76,9 @@ app.post('/contact', (req, res)=>{
         let mailOptions = {
           from: "lahiru@treasureboxphotography.co.uk",
           // to: "daleferrier@gmail.com",
+          // DISABLE FOR LOCAL TESTING
           to: "daleferrier@gmail.com, lahiru@treasureboxphotography.co.uk",
+          
           subject: "Treasurebox Photography Enquiry", // Subject line
           text: req.body.details.enquiry, // plain text body
           html: htmlEmail, // html body

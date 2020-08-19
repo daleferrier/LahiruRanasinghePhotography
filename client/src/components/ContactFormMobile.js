@@ -229,6 +229,12 @@ function ContactDetails() {
               </a>
               {/* +447900690989 */}
             </li>
+            <li style={{ margin: 40 }}>
+              <a style={{ color: "black" }} href="https://wa.me/447900690989">
+                <WhatsAppIcon style={{ margin: 10, fontSize: "2em" }} />
+                WhatsApp Me
+              </a>
+            </li>
             <li style={{ margin: "40px 10px" }}>
               <EmailIcon style={{ margin: 10, fontSize: "2em" }} />
               <a

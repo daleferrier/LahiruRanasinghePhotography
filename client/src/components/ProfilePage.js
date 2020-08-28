@@ -104,10 +104,10 @@ function ProfileImage(){
             photo). Thank you for visiting Treasurebox Photography!
           </p>
           <p>
-            As cheesy as this is, to me, my camera is my treasure box. I use it
-            to capture and store the things that are most precious...memories. I
-            would love to meet you and your loved ones and create treasures for
-            you too!
+            I am a family photographer based in Ruislip, West London and will
+            happily travel to Harrow, Hillingdon, Buckinghamshire, Hertfordshire
+            and West London. If you would like me to create some beautiful
+            portraits for you and your loved ones, please do get in in touch.
           </p>
           <p>
             I have a very relaxed and informal style. My shoots are done in your
@@ -117,10 +117,9 @@ function ProfileImage(){
             four year old and am an expert at animal sounds!
           </p>
           <p>
-            I am based in Ruislip, West London and will happily travel to Harrow,
-            Hillingdon, Buckinghamshire, Hertfordshire and West London. If you
-            would like me to create some beautiful images for you and your loved
-            ones, please do get in in touch.
+            My camera is my treasure box. I use it to capture and store the
+            things that are most precious...memories. I would love to meet you
+            and your loved ones and create treasures for you too!
           </p>
           <p>I hope you'll invite me to photograph you and your family soon!</p>
         </div>

@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const app=express();
-var path = require("path");
+var path = require("path"); 
 
 // DISABLE FOR LOCAL TESTING
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
@@ -40,7 +40,8 @@ app.post('/contact', (req, res)=>{
           auth: {
             user: "26b65e02a0ac6faf9b6495f813ef4af4",
             // user: "apikey",
-            pass: "67bdc67bccf71db9e9790662471ec371",
+            pass: "586c632bbe8c2d3c905682dfc70c836e",
+            // pass: "67bdc67bccf71db9e9790662471ec371",
             // "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",
           },
         });

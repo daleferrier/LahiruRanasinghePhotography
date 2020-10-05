@@ -88,6 +88,22 @@ const galleryImages = [
   'S2.jpg',
   'S3.jpg',
   'S4.jpg',
+  'GAL2-1.jpg',
+  'GAL2-3.jpg',
+  'GAL2-4.jpg',
+  'GAL2-5.jpg',
+  'GAL2-6.jpg',
+  'GAL2-7.jpg',
+  'GAL2-9.jpg',
+  'GAL2-11.jpg',
+  'GAL2-12.jpg',
+  'GAL2-13.jpg',
+  'GAL2-15.jpg',
+  'GAL2-16.jpg',
+  'GAL2-17.jpg',
+  'GAL2-18.jpg',
+  'GAL2-19.jpg',
+  'GAL2-20.jpg',
 ];
 
 export {Images, carouselImages, galleryImages};

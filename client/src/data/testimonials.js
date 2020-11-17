@@ -40,6 +40,24 @@ const testimonials = [
     testimonial:
       "Looking at the portfolio at Treasurebox Photography it can be easily seen that Lahiru is a skilled photographer. Having used him on many occasions we can understand why. He has an eye to capture perfect images with the personality to make the moment feel natural. He is very versatile and has covered many different types of events for us including working with animals and children! His end product is as the name suggests, something to treasure.",
   },
+  {
+    name: "Shane",
+    photo: "portrait.jpeg",
+    testimonial:
+      "We had an amazing experience with treasure box photography. Lahiru made us feel at ease and comfortable throughout the entire shoot. He was particularly good at engaging with our 2 year old son and turned a reluctant toddler into a excited and giggly participant. We were incredibly happy with the final product including the tender moments that were captured so perfectly and the lovely personalised photo box they were presented in. We will definitely be using treasure box again to capture those special family events.",
+  },
+  {
+    name: "Jess",
+    photo: "portrait.jpeg",
+    testimonial:
+      "Lahiru did a great job with our family / pregnancy photoshoot. It was informal, laid back and fun and he captured it all beautifully. He also worked really well with an uncooperative 2 year old who had his own agenda! Really happy with the photos. Thank you!",
+  },
+  {
+    name: "Priscilla",
+    photo: "portrait.jpeg",
+    testimonial:
+      "Great photography! We loved our photos. Made us feel very comfotable during the shoot. Highly recommend.",
+  },
 ];
 
 export { testimonials };

@@ -1,7 +1,6 @@
-import React from 'react';
-import './CopyrightBanner.css';
+import React from "react";
+import "./CopyrightBanner.css";
 
-
-export default function CopyrightBanner(){
-    return <div className="CopyrightBanner">Ⓒ Lahiru Ranasinghe</div>;
+export default function CopyrightBanner() {
+  return <div className="CopyrightBanner">Ⓒ Lahiru Ranasinghe</div>;
 }

@@ -143,7 +143,7 @@ function ContactUserForm() {
             style={{ visibility: `${visibility ? "visible" : "hidden"}` }}
           />
         </div>
-        <Paper elevation={3} style={{ textAlign: "center" }}>
+        <Paper elevation={3} style={{ textAlign: "center"}}>
           <Button
             className="ContactFormMobile-close"
             style={{ position: "absolute", right: "10px", outline: "none" }}
@@ -316,7 +316,7 @@ export default function ContactFormMobile() {
       });
   }, []);
   return (
-    <div className="ContactFormMobile">
+    <div className="ContactFormMobile" >
       <PageHeader header={props.ContactForm} />
       <div className="ContactFormMobile-scene">
         <div className="ContactFormMobile-card">

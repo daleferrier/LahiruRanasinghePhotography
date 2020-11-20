@@ -2,6 +2,11 @@
   height: 80vh;
 }
 
+.ContactFormMobile{
+  /* border: 2px solid rgb(255, 0, 255); */
+  min-height: 650px;
+}
+
 .ContactFormMobile-scene{
     width: 100vw;
     height: 80vh;
